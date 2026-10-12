@@ -1,0 +1,10 @@
+{
+  "name": "netzero-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Part F: drives the NetZero Hub microservices to generate process-mining event logs",
+  "scripts": {
+    "start": "node simulate.mjs"
+  }
+}

@@ -1,0 +1,35 @@
+%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    actor Citizen
+    participant GW as API Gateway
+    participant JP as journey-planner-service
+    participant TT as Transport Operators feed (mock)
+    participant EM as Emission-factor source (mock)
+
+    Citizen->>GW: POST /journeys/plan {origin, destination, maxDurationMins?, modes?}
+    GW->>JP: POST /journeys/plan
+    Note over JP: 3.1 trip request received
+
+    par 3.2 parallel split (scatter)
+        JP->>TT: 3.3 retrieve scheduled services
+        TT-->>JP: 3.5 train (if a rail link exists), bus
+    and
+        JP->>EM: 3.4 retrieve per-mode emission factors
+        EM-->>JP: 3.6 train 0.04, bus 0.10, bike 0, drive 0.17 kg/km
+    end
+    Note over JP: 3.7 parallel join (gather)
+
+    JP->>JP: 3.8 candidate routes (bike share only if ≤ 15 km)
+    JP->>JP: 3.9 append CO2-e estimate to each route
+    par 3.10 inclusive split: only modes meeting the constraints
+        JP->>JP: prepare train options
+    and
+        JP->>JP: prepare bus options
+    and
+        JP->>JP: prepare bike share options
+    end
+    Note over JP: 3.11 inclusive join (at least one mode always kept)
+    JP->>JP: 3.12 rank by CO2 ascending
+
+    JP-->>GW: 200 ranked options + driving baseline (3.13)
+    GW-->>Citizen: journey plan

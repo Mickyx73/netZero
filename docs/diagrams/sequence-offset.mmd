@@ -1,0 +1,53 @@
+%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    actor Citizen
+    participant GW as API Gateway
+    participant FP as footprint-service
+    participant OfS as offset-service
+    participant MQ as RabbitMQ (netzero.events)
+    participant PG as Payment Gateway (mock)
+    participant VCR as Verified Carbon Registry (mock)
+
+    Citizen->>GW: POST /footprint {survey}
+    GW->>FP: POST /footprint
+    FP-->>Citizen: 201 report + caseId (6.1, 6.2, 6.3)
+
+    alt 6.4 = No
+        Citizen->>GW: POST /footprint/:userId/decline-offset {caseId}
+        GW->>FP: decline-offset
+        FP-->>Citizen: baseline recorded (case ends)
+    else 6.4 = Yes
+        Citizen->>GW: POST /offsets {amount, projectTypes, paymentToken, caseId}
+        GW->>OfS: POST /offsets
+        OfS->>OfS: 6.5 record request, status=pending
+        OfS->>MQ: publish offset.requested
+        OfS-->>Citizen: 202 pending (offsetId, same caseId)
+
+        MQ->>OfS: consume offset.requested (claims pending → processing)
+        activate OfS
+        par 6.6 / 6.7 inclusive: one branch per selected project type
+            OfS->>OfS: reserve reforestation credits
+        and
+            OfS->>OfS: reserve renewable energy credits
+        end
+        loop 6.8 / 6.9: up to 3 retries
+            OfS->>PG: charge card
+            PG-->>OfS: approved / declined (notify citizen, back off)
+        end
+        alt payment cleared
+            OfS->>VCR: 6.10 retire credits
+            VCR-->>OfS: 6.11 serials cancelled
+            OfS->>OfS: 6.12 mint certificate, status=certified
+            OfS->>MQ: publish offset.certified
+            OfS->>FP: PATCH /footprint/:userId/apply-offset {caseId}
+            FP->>FP: 6.13 update net-emissions score (same case)
+        else declined after retries
+            OfS->>OfS: status=payment_failed (not modelled in Part B)
+            OfS->>MQ: publish offset.failed
+        end
+        deactivate OfS
+
+        Citizen->>GW: GET /offsets/:id (poll)
+        GW->>OfS: GET /offsets/:id
+        OfS-->>Citizen: certified (certificateId, retiredSerials)
+    end

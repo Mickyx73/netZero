@@ -1,0 +1,14 @@
+node_modules/
+data/
+dist/
+*.log
+# generated at runtime -- folders are kept so Docker bind mounts stay user-owned
+logs/*
+!logs/.gitkeep
+exports/*
+!exports/.gitkeep
+analysis/*
+!analysis/.gitkeep
+__pycache__/
+.venv/
+.impeccable/

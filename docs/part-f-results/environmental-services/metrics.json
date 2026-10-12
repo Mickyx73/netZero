@@ -1,0 +1,14 @@
+{
+  "cases": 120,
+  "events": 1072,
+  "activity_instances": 845,
+  "variants": 20,
+  "case_duration_mean_s": 357.6575,
+  "case_duration_median_s": 346.44,
+  "reference_fitness": 0.9879,
+  "reference_fitting_traces_pct": 96.67,
+  "reference_precision": 0.9235,
+  "discovered_fitness": 1.0,
+  "discovered_precision": 0.8741,
+  "deviating_cases": 4
+}

@@ -1,0 +1,44 @@
+# Apromore Community Edition 8.1 for the Part F process-mining analysis.
+# Adapted from the official github.com/apromore/ApromoreDocker (release/v8.1):
+#   - Java heap reduced from 20 GB to fit a laptop (raise APROMORE_HEAP if you have RAM to spare)
+#   - MySQL is not published on the host (avoids clashing with a local MySQL on 3306)
+#   - web UI on http://localhost:8181 instead of port 80 (no root/port conflicts)
+# Start:  docker compose -f tools/apromore/docker-compose.yml up -d   (first start takes ~2 min)
+# Login:  admin / password
+name: apromore
+
+services:
+  apromore:
+    image: ${APROMORE_IMAGE}
+    environment:
+      JAVA_OPTS: "-server -Xmx${APROMORE_HEAP:-2g} -Xmn256m"
+    volumes:
+      - data-repository:/home/ubuntu/.apromore/Repository
+    env_file:
+      - .env
+    ports:
+      - "8181:8181"
+    depends_on:
+      apromore-sql:
+        condition: service_healthy
+    restart: unless-stopped
+
+  apromore-sql:
+    image: ${MYSQL_IMAGE}
+    command: --max_allowed_packet=256M
+    environment:
+      MYSQL_DATABASE: apromore
+      MYSQL_ROOT_PASSWORD: MAcri
+    volumes:
+      - ./config/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 20s
+      retries: 30
+    restart: unless-stopped
+
+volumes:
+  data-repository:
+  db-data:

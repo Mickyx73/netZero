@@ -1,0 +1,174 @@
+# NetZero Hub — Part E microservices stack.
+# One command (`docker compose up --build`) brings up:
+#   - a message broker (RabbitMQ) for the two asynchronous choreographies
+#   - five independently deployable microservices, each with its own SQLite
+#     volume (database-per-service — no service reads another's data store)
+#   - one API gateway as the platform's single external entry point
+# Every one of the five process services also writes detailed, process-mining-
+# ready event logs into the shared ./logs folder (see each service's
+# src/processLog.ts). Part F tooling (profile "tools", never started by `up`):
+#   docker compose run --rm simulator       # execute hundreds of process cases
+#   docker compose run --rm log-exporter    # logs -> Disco/Apromore CSV + XES
+#   docker compose run --rm process-miner   # pm4py discovery/conformance/performance
+# or simply ./partf.sh to run all three in order.
+# Browser demo console: http://localhost:3000 once the stack is up.
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      # Refresh queue/consumer statistics every second (default 5 s), so the
+      # demo console shows a message waiting the moment its consumer stops.
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbit collect_statistics_interval 1000"
+    ports:
+      - "5672:5672"   # AMQP
+      - "15672:15672" # management UI (guest/guest)
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  ev-reservation-service:
+    build: ./services/ev-reservation-service
+    ports: ["3001:3001"]
+    environment:
+      PORT: 3001
+      SERVICE_NAME: ev-reservation-service
+      DATA_DIR: /app/data
+      LOG_DIR: /app/logs
+      AMQP_URL: amqp://rabbitmq:5672
+    volumes:
+      - reservation_data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+
+  ev-billing-service:
+    build: ./services/ev-billing-service
+    ports: ["3002:3002"]
+    environment:
+      PORT: 3002
+      SERVICE_NAME: ev-billing-service
+      DATA_DIR: /app/data
+      LOG_DIR: /app/logs
+      AMQP_URL: amqp://rabbitmq:5672
+    volumes:
+      - billing_data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+
+  footprint-service:
+    build: ./services/footprint-service
+    ports: ["3003:3003"]
+    environment:
+      PORT: 3003
+      SERVICE_NAME: footprint-service
+      DATA_DIR: /app/data
+      LOG_DIR: /app/logs
+    volumes:
+      - footprint_data:/app/data
+      - ./logs:/app/logs
+
+  offset-service:
+    build: ./services/offset-service
+    ports: ["3004:3004"]
+    environment:
+      PORT: 3004
+      SERVICE_NAME: offset-service
+      DATA_DIR: /app/data
+      LOG_DIR: /app/logs
+      AMQP_URL: amqp://rabbitmq:5672
+      FOOTPRINT_URL: http://footprint-service:3003
+    volumes:
+      - offset_data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+      footprint-service: { condition: service_started }
+
+  journey-planner-service:
+    build: ./services/journey-planner-service
+    ports: ["3005:3005"]
+    environment:
+      PORT: 3005
+      SERVICE_NAME: journey-planner-service
+      LOG_DIR: /app/logs
+    volumes:
+      - ./logs:/app/logs
+
+  api-gateway:
+    build: ./gateway
+    ports: ["3000:3000"]
+    environment:
+      PORT: 3000
+      SERVICE_NAME: api-gateway
+      RESERVATION_URL: http://ev-reservation-service:3001
+      BILLING_URL: http://ev-billing-service:3002
+      FOOTPRINT_URL: http://footprint-service:3003
+      OFFSET_URL: http://offset-service:3004
+      JOURNEY_URL: http://journey-planner-service:3005
+      RABBITMQ_MGMT_URL: http://rabbitmq:15672
+      LOG_DIR: /app/logs
+    volumes:
+      - ./logs:/app/logs:ro   # read-only: feeds the demo console's live process-event panel
+    depends_on:
+      - ev-reservation-service
+      - ev-billing-service
+      - footprint-service
+      - offset-service
+      - journey-planner-service
+
+  # Process-mining export tool. Not started by `docker compose up` (it has no
+  # long-running server to run); invoke it on demand once some demo traffic
+  # has been generated:
+  #   docker compose run --rm log-exporter
+  # It reads every service's *.jsonl file from the shared ./logs folder and
+  # writes one CSV + one XES file per business process into ./exports, ready
+  # to open directly in Disco or Apromore.
+  log-exporter:
+    build: ./tools/log-exporter
+    profiles: ["tools"]
+    user: "${HOST_UID:-0}:${HOST_GID:-0}"   # partf.sh sets these so exports are owned by you, not root
+    environment:
+      LOG_DIR: /app/logs
+      OUT_DIR: /app/exports
+      TIME_SCALE: ${TIME_SCALE:-1}
+    volumes:
+      - ./logs:/app/logs:ro
+      - ./exports:/app/exports
+
+  # Part F process simulator: drives the running stack through the gateway
+  # (CASES / SEED / PROCESSES can be overridden from the shell).
+  simulator:
+    build: ./tools/simulator
+    profiles: ["tools"]
+    environment:
+      BASE: http://api-gateway:3000
+      CASES: ${CASES:-120}
+      SEED: ${SEED:-2026}
+      PROCESSES: ${PROCESSES:-journey,ev,environment}
+    depends_on:
+      - api-gateway
+
+  # Part F process mining (pm4py): reads ./exports, writes ./analysis.
+  process-miner:
+    build: ./analytics
+    profiles: ["tools"]
+    user: "${HOST_UID:-0}:${HOST_GID:-0}"
+    environment:
+      HOME: /tmp
+      MPLCONFIGDIR: /tmp
+      EXPORT_DIR: /data/exports
+      OUT_DIR: /data/analysis
+      TIME_UNIT: ${TIME_UNIT:-min}
+    volumes:
+      - ./exports:/data/exports:ro
+      - ./analysis:/data/analysis
+
+volumes:
+  reservation_data:
+  billing_data:
+  footprint_data:
+  offset_data:

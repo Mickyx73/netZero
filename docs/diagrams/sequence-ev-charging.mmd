@@ -1,0 +1,51 @@
+%%{init: {'theme':'neutral'}}%%
+sequenceDiagram
+    actor Driver as EV Owner
+    participant GW as API Gateway
+    participant Res as ev-reservation-service
+    participant PG as Payment Gateway (mock)
+    participant MQ as RabbitMQ (netzero.events)
+    participant Bill as ev-billing-service
+
+    Driver->>GW: POST /reservations {stationId, slotStart, slotEnd}
+    GW->>Res: POST /reservations
+    Note over Res: 4.1 request, 4.2 overlap check in one SQLite transaction
+    alt bay free (4.3 = Yes)
+        Res-->>Driver: 201 reservationConfirmed (4.4, confirmation code)
+    else overlapping booking exists (4.3 = No)
+        Res-->>Driver: 409 bayUnavailable + alternate stations
+    end
+
+    Note over Driver,Res: driver travels to the bay ("Await vehicle arrival")
+
+    loop until approved, or the driver gives up (POST /abandon)
+        Driver->>GW: POST /reservations/:id/start {paymentToken}
+        GW->>Res: POST /reservations/:id/start
+        Note over Res: 4.5 authenticate (first attempt only)
+        Res->>PG: 4.6 pre-authorise estimated cost (hold)
+        alt approved (4.7 = Yes)
+            PG-->>Res: authCode
+            Res-->>Driver: 200 chargingStarted (4.8 starts)
+        else declined (4.7 = No)
+            PG-->>Res: declined
+            Res-->>Driver: 402 preAuthDeclined (4.7a alert, retry)
+        end
+    end
+
+    Driver->>GW: POST /reservations/:id/complete {kWhConsumed}
+    GW->>Res: POST /reservations/:id/complete
+    Res-->>Driver: 200 sessionEnded (4.8 completes, a repeat call gets 409)
+    Res->>MQ: publish ev.session.ended {sessionId, kWh, holdId, holdAmount}
+
+    MQ->>Bill: consume ev.session.ended
+    activate Bill
+    Note over Bill: idempotent: a redelivered event is ignored
+    Bill->>Bill: 4.9 final kWh, 4.10 cost from tariff
+    Bill->>PG: 4.11 capture cost against hold, release remainder
+    Bill->>Bill: 4.12 issue digital receipt
+    Bill->>MQ: publish ev.billing.settled
+    deactivate Bill
+
+    Driver->>GW: GET /billing/:sessionId (poll)
+    GW->>Bill: GET /billing/:sessionId
+    Bill-->>Driver: status=settled (receipt, cost, released hold)

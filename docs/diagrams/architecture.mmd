@@ -1,0 +1,57 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'fontSize': '16px'}}}%%
+graph TB
+    Citizen(["Citizen / Client App<br/>(browser demo console)"])
+
+    subgraph GW["API Gateway :3000"]
+        Gateway["Reverse proxy +<br/>GET /citizen/:id/dashboard (aggregator)<br/>+ demo console & live event feed"]
+    end
+
+    Citizen -->|HTTPS| Gateway
+
+    subgraph Sync["Synchronous services"]
+        Reservation["ev-reservation-service :3001<br/>(Service 3.2)"]
+        Footprint["footprint-service :3003<br/>(Service 5.1)"]
+        Journey["journey-planner-service :3005<br/>(Service 2.1, scatter-gather)"]
+    end
+
+    subgraph Async["Asynchronous services"]
+        Billing["ev-billing-service :3002<br/>(Service 3.3)"]
+        Offset["offset-service :3004<br/>(Service 5.2)"]
+    end
+
+    Gateway --> Reservation
+    Gateway --> Footprint
+    Gateway --> Journey
+    Gateway --> Billing
+    Gateway --> Offset
+
+    Broker{{"RabbitMQ<br/>exchange: netzero.events (topic)"}}
+
+    Reservation -->|"publish<br/>ev.session.ended"| Broker
+    Broker -->|"consume"| Billing
+    Billing -->|"publish<br/>ev.billing.settled"| Broker
+
+    Offset -->|"publish<br/>offset.requested"| Broker
+    Broker -->|"consume"| Offset
+    Offset -->|"publish<br/>offset.certified / .failed"| Broker
+    Offset -->|"PATCH apply-offset<br/>(BPMN 6.13)"| Footprint
+
+    ResDB[("SQLite<br/>reservations.db")]
+    BillDB[("SQLite<br/>billing.db")]
+    FootDB[("SQLite<br/>footprint.db")]
+    OffDB[("SQLite<br/>offsets.db")]
+
+    Logs[("logs/*.jsonl — process-event logs<br/>appended by all five services (Part F)")]
+    Logs -.->|"read-only live feed"| Gateway
+
+    Reservation --- ResDB
+    Billing --- BillDB
+    Footprint --- FootDB
+    Offset --- OffDB
+
+    classDef svc fill:#e8f4ea,stroke:#2f6b3a,color:#173a1e;
+    classDef db fill:#eef1fb,stroke:#33418f,color:#1c2452;
+    classDef broker fill:#fdefe0,stroke:#b5651d,color:#5c3311;
+    class Reservation,Billing,Footprint,Offset,Journey,Gateway svc;
+    class ResDB,BillDB,FootDB,OffDB,Logs db;
+    class Broker broker;

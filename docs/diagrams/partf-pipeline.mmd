@@ -1,0 +1,27 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'fontSize': '15px'}}}%%
+graph LR
+    Sim["tools/simulator<br/>seeded stochastic actors<br/>(drivers, citizens, card issuers)"]
+    subgraph Stack["Part E stack (unchanged, real services)"]
+        GW["API Gateway"]
+        Svcs["5 microservices<br/>+ RabbitMQ"]
+    end
+    Logs[("logs/*.jsonl<br/>one ProcessEvent per<br/>BPMN activity")]
+    Exp["tools/log-exporter<br/>group by process → case<br/>TIME_SCALE=60"]
+    XES[("exports/*.xes, *.csv<br/>3 event logs")]
+    Disco["Disco<br/>process map, variants,<br/>performance, filters"]
+    Apro["Apromore<br/>BPMN discovery,<br/>conformance, animation"]
+    PM["analytics/mine.py (pm4py)<br/>discovery, alignments vs<br/>Part B, performance, SNA"]
+    Res[("analysis/RESULTS.md<br/>+ figures")]
+
+    Sim -->|"HTTP, Poisson arrivals"| GW --> Svcs
+    Svcs -->|"append"| Logs --> Exp --> XES
+    XES --> Disco
+    XES --> Apro
+    XES --> PM --> Res
+
+    classDef tool fill:#fdefe0,stroke:#b5651d,color:#5c3311;
+    classDef data fill:#eef1fb,stroke:#33418f,color:#1c2452;
+    classDef svc fill:#e8f4ea,stroke:#2f6b3a,color:#173a1e;
+    class Sim,Exp,PM,Disco,Apro tool;
+    class Logs,XES,Res data;
+    class GW,Svcs svc;

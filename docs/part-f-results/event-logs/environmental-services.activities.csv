@@ -1,0 +1,846 @@
+Case ID,Activity,Start Timestamp,Complete Timestamp,Resource,Service,BPMN Ref,Case Outcome
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Initiate assessment,2026-10-09T10:11:22.116Z,2026-10-09T10:11:22.116Z,Citizen,footprint-service,6.1,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Calculate footprint,2026-10-09T10:11:22.116Z,2026-10-09T10:11:22.116Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Present footprint report and peer comparison,2026-10-09T10:11:22.176Z,2026-10-09T10:11:22.176Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Select amount of CO2 to offset,2026-10-09T10:15:42.276Z,2026-10-09T10:15:42.276Z,Citizen,offset-service,6.5,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Reserve reforestation credits,2026-10-09T10:15:42.576Z,2026-10-09T10:16:02.676Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Reserve renewable energy credits,2026-10-09T10:15:42.636Z,2026-10-09T10:16:15.516Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Process payment for offset units,2026-10-09T10:16:15.576Z,2026-10-09T10:16:20.976Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Retire credits under citizen name,2026-10-09T10:16:20.976Z,2026-10-09T10:17:44.436Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Mint and issue offset certificate,2026-10-09T10:17:44.436Z,2026-10-09T10:17:44.436Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+07f62354-8ac2-4dfe-bbf8-b0b717e48bdd,Update net emissions score and database,2026-10-09T10:17:44.616Z,2026-10-09T10:17:44.616Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Initiate assessment,2026-10-09T10:11:31.476Z,2026-10-09T10:11:31.476Z,Citizen,footprint-service,6.1,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Calculate footprint,2026-10-09T10:11:31.476Z,2026-10-09T10:11:31.476Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Present footprint report and peer comparison,2026-10-09T10:11:31.476Z,2026-10-09T10:11:31.476Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Select amount of CO2 to offset,2026-10-09T10:17:52.176Z,2026-10-09T10:17:52.176Z,Citizen,offset-service,6.5,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Reserve reforestation credits,2026-10-09T10:17:52.296Z,2026-10-09T10:18:07.896Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Process payment for offset units,2026-10-09T10:18:07.896Z,2026-10-09T10:18:12.456Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Retire credits under citizen name,2026-10-09T10:18:12.516Z,2026-10-09T10:19:23.556Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Mint and issue offset certificate,2026-10-09T10:19:23.556Z,2026-10-09T10:19:23.556Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+db39f60d-6918-4d5b-af2d-3f4f15fcfddc,Update net emissions score and database,2026-10-09T10:19:23.676Z,2026-10-09T10:19:23.676Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Initiate assessment,2026-10-09T10:11:44.196Z,2026-10-09T10:11:44.196Z,Citizen,footprint-service,6.1,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Calculate footprint,2026-10-09T10:11:44.196Z,2026-10-09T10:11:44.196Z,Assessment Service,footprint-service,6.2,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Present footprint report and peer comparison,2026-10-09T10:11:44.196Z,2026-10-09T10:11:44.196Z,Assessment Service,footprint-service,6.3,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Select amount of CO2 to offset,2026-10-09T10:14:40.776Z,2026-10-09T10:14:40.776Z,Citizen,offset-service,6.5,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Reserve reforestation credits,2026-10-09T10:14:40.896Z,2026-10-09T10:15:09.876Z,Offset Marketplace,offset-service,6.7,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Process payment for offset units,2026-10-09T10:15:09.876Z,2026-10-09T10:15:20.016Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Notify citizen of payment failure,2026-10-09T10:15:20.076Z,2026-10-09T10:15:20.076Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Process payment for offset units,2026-10-09T10:16:20.136Z,2026-10-09T10:16:24.996Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Notify citizen of payment failure,2026-10-09T10:16:25.056Z,2026-10-09T10:16:25.056Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Process payment for offset units,2026-10-09T10:18:25.056Z,2026-10-09T10:18:35.676Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Notify citizen of payment failure,2026-10-09T10:18:35.676Z,2026-10-09T10:18:35.676Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Process payment for offset units,2026-10-09T10:21:35.736Z,2026-10-09T10:21:43.116Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+bc3c984d-bdeb-4e7e-8de0-22e46bef7998,Offset purchase cancelled (payment failed),2026-10-09T10:21:43.116Z,2026-10-09T10:21:43.116Z,Offset Marketplace,offset-service,,Offset purchase cancelled (payment failed)
+b8f66e23-9cb5-4c32-813f-b017bc67f67f,Initiate assessment,2026-10-09T10:12:44.856Z,2026-10-09T10:12:44.856Z,Citizen,footprint-service,6.1,Record footprint baseline
+b8f66e23-9cb5-4c32-813f-b017bc67f67f,Calculate footprint,2026-10-09T10:12:44.856Z,2026-10-09T10:12:44.856Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+b8f66e23-9cb5-4c32-813f-b017bc67f67f,Present footprint report and peer comparison,2026-10-09T10:12:44.856Z,2026-10-09T10:12:44.856Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+b8f66e23-9cb5-4c32-813f-b017bc67f67f,Record footprint baseline,2026-10-09T10:18:38.196Z,2026-10-09T10:18:38.196Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Initiate assessment,2026-10-09T10:12:49.296Z,2026-10-09T10:12:49.296Z,Citizen,footprint-service,6.1,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Calculate footprint,2026-10-09T10:12:49.296Z,2026-10-09T10:12:49.296Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Present footprint report and peer comparison,2026-10-09T10:12:49.296Z,2026-10-09T10:12:49.296Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Select amount of CO2 to offset,2026-10-09T10:19:15.696Z,2026-10-09T10:19:15.696Z,Citizen,offset-service,6.5,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Reserve reforestation credits,2026-10-09T10:19:15.756Z,2026-10-09T10:19:51.216Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Process payment for offset units,2026-10-09T10:19:51.216Z,2026-10-09T10:19:58.296Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Retire credits under citizen name,2026-10-09T10:19:58.296Z,2026-10-09T10:21:29.436Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Mint and issue offset certificate,2026-10-09T10:21:29.436Z,2026-10-09T10:21:29.436Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+55a5ead0-2009-4c69-ac6f-36961661d7bb,Update net emissions score and database,2026-10-09T10:21:29.676Z,2026-10-09T10:21:29.676Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Initiate assessment,2026-10-09T10:13:11.256Z,2026-10-09T10:13:11.256Z,Citizen,footprint-service,6.1,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Calculate footprint,2026-10-09T10:13:11.256Z,2026-10-09T10:13:11.256Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Present footprint report and peer comparison,2026-10-09T10:13:11.256Z,2026-10-09T10:13:11.256Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Select amount of CO2 to offset,2026-10-09T10:16:22.056Z,2026-10-09T10:16:22.056Z,Citizen,offset-service,6.5,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Reserve reforestation credits,2026-10-09T10:16:22.176Z,2026-10-09T10:17:03.636Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Process payment for offset units,2026-10-09T10:17:03.696Z,2026-10-09T10:17:11.376Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Retire credits under citizen name,2026-10-09T10:17:11.436Z,2026-10-09T10:18:39.276Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Mint and issue offset certificate,2026-10-09T10:18:39.276Z,2026-10-09T10:18:39.276Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+ebaff689-11c2-4a20-8ee8-b448b2a4ce9d,Update net emissions score and database,2026-10-09T10:18:39.396Z,2026-10-09T10:18:39.396Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+7fc5e501-c8e8-4897-82b8-83bdd7398cb4,Initiate assessment,2026-10-09T10:13:15.876Z,2026-10-09T10:13:15.876Z,Citizen,footprint-service,6.1,Record footprint baseline
+7fc5e501-c8e8-4897-82b8-83bdd7398cb4,Calculate footprint,2026-10-09T10:13:15.876Z,2026-10-09T10:13:15.876Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+7fc5e501-c8e8-4897-82b8-83bdd7398cb4,Present footprint report and peer comparison,2026-10-09T10:13:15.936Z,2026-10-09T10:13:15.936Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+7fc5e501-c8e8-4897-82b8-83bdd7398cb4,Record footprint baseline,2026-10-09T10:18:45.816Z,2026-10-09T10:18:45.816Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Initiate assessment,2026-10-09T10:14:27.156Z,2026-10-09T10:14:27.156Z,Citizen,footprint-service,6.1,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Calculate footprint,2026-10-09T10:14:27.156Z,2026-10-09T10:14:27.156Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Present footprint report and peer comparison,2026-10-09T10:14:27.156Z,2026-10-09T10:14:27.156Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Select amount of CO2 to offset,2026-10-09T10:19:07.236Z,2026-10-09T10:19:07.236Z,Citizen,offset-service,6.5,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Reserve renewable energy credits,2026-10-09T10:19:07.476Z,2026-10-09T10:19:26.856Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Process payment for offset units,2026-10-09T10:19:26.856Z,2026-10-09T10:19:33.876Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Retire credits under citizen name,2026-10-09T10:19:33.936Z,2026-10-09T10:20:58.536Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Mint and issue offset certificate,2026-10-09T10:20:58.536Z,2026-10-09T10:20:58.536Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+6f23cc4c-8b78-47a0-93f5-6c27d05a5e60,Update net emissions score and database,2026-10-09T10:20:58.956Z,2026-10-09T10:20:58.956Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Initiate assessment,2026-10-09T10:14:33.036Z,2026-10-09T10:14:33.036Z,Citizen,footprint-service,6.1,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Calculate footprint,2026-10-09T10:14:33.036Z,2026-10-09T10:14:33.036Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Present footprint report and peer comparison,2026-10-09T10:14:33.036Z,2026-10-09T10:14:33.036Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Select amount of CO2 to offset,2026-10-09T10:18:55.296Z,2026-10-09T10:18:55.296Z,Citizen,offset-service,6.5,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Reserve waste recycling credits,2026-10-09T10:18:55.476Z,2026-10-09T10:19:16.296Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Reserve reforestation credits,2026-10-09T10:18:55.476Z,2026-10-09T10:19:21.156Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Reserve renewable energy credits,2026-10-09T10:18:55.476Z,2026-10-09T10:19:28.596Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Process payment for offset units,2026-10-09T10:19:28.656Z,2026-10-09T10:19:38.256Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Retire credits under citizen name,2026-10-09T10:19:38.256Z,2026-10-09T10:21:01.176Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Mint and issue offset certificate,2026-10-09T10:21:01.236Z,2026-10-09T10:21:01.236Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+f14bad51-f87b-4471-897d-583638fe4180,Update net emissions score and database,2026-10-09T10:21:01.416Z,2026-10-09T10:21:01.416Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+6a55ba1d-48e9-4cb8-bd0b-53e8a9887aac,Initiate assessment,2026-10-09T10:14:45.276Z,2026-10-09T10:14:45.276Z,Citizen,footprint-service,6.1,Record footprint baseline
+6a55ba1d-48e9-4cb8-bd0b-53e8a9887aac,Calculate footprint,2026-10-09T10:14:45.276Z,2026-10-09T10:14:45.276Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+6a55ba1d-48e9-4cb8-bd0b-53e8a9887aac,Present footprint report and peer comparison,2026-10-09T10:14:45.336Z,2026-10-09T10:14:45.336Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+6a55ba1d-48e9-4cb8-bd0b-53e8a9887aac,Record footprint baseline,2026-10-09T10:17:52.536Z,2026-10-09T10:17:52.536Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+5816b483-9469-492b-896a-e78c7891ff3f,Initiate assessment,2026-10-09T10:14:55.056Z,2026-10-09T10:14:55.056Z,Citizen,footprint-service,6.1,Record footprint baseline
+5816b483-9469-492b-896a-e78c7891ff3f,Calculate footprint,2026-10-09T10:14:55.056Z,2026-10-09T10:14:55.056Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+5816b483-9469-492b-896a-e78c7891ff3f,Present footprint report and peer comparison,2026-10-09T10:14:55.056Z,2026-10-09T10:14:55.056Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+5816b483-9469-492b-896a-e78c7891ff3f,Record footprint baseline,2026-10-09T10:16:16.536Z,2026-10-09T10:16:16.536Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+a1da6393-6f56-479c-83f0-0162554eab8e,Initiate assessment,2026-10-09T10:15:05.316Z,2026-10-09T10:15:05.316Z,Citizen,footprint-service,6.1,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Calculate footprint,2026-10-09T10:15:05.316Z,2026-10-09T10:15:05.316Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Present footprint report and peer comparison,2026-10-09T10:15:05.316Z,2026-10-09T10:15:05.316Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Select amount of CO2 to offset,2026-10-09T10:21:48.396Z,2026-10-09T10:21:48.396Z,Citizen,offset-service,6.5,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Reserve reforestation credits,2026-10-09T10:21:48.516Z,2026-10-09T10:22:07.716Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Reserve waste recycling credits,2026-10-09T10:21:48.516Z,2026-10-09T10:22:26.256Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Process payment for offset units,2026-10-09T10:22:26.316Z,2026-10-09T10:22:31.596Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Retire credits under citizen name,2026-10-09T10:22:31.596Z,2026-10-09T10:23:43.416Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Mint and issue offset certificate,2026-10-09T10:23:43.476Z,2026-10-09T10:23:43.476Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+a1da6393-6f56-479c-83f0-0162554eab8e,Update net emissions score and database,2026-10-09T10:23:43.836Z,2026-10-09T10:23:43.836Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+ddc80c70-5e66-45fb-824c-0f6d12ee1ad4,Initiate assessment,2026-10-09T10:15:57.576Z,2026-10-09T10:15:57.576Z,Citizen,footprint-service,6.1,Record footprint baseline
+ddc80c70-5e66-45fb-824c-0f6d12ee1ad4,Calculate footprint,2026-10-09T10:15:57.576Z,2026-10-09T10:15:57.576Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+ddc80c70-5e66-45fb-824c-0f6d12ee1ad4,Present footprint report and peer comparison,2026-10-09T10:15:57.576Z,2026-10-09T10:15:57.576Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+ddc80c70-5e66-45fb-824c-0f6d12ee1ad4,Record footprint baseline,2026-10-09T10:17:38.676Z,2026-10-09T10:17:38.676Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Initiate assessment,2026-10-09T10:16:11.676Z,2026-10-09T10:16:11.676Z,Citizen,footprint-service,6.1,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Calculate footprint,2026-10-09T10:16:11.676Z,2026-10-09T10:16:11.676Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Present footprint report and peer comparison,2026-10-09T10:16:11.736Z,2026-10-09T10:16:11.736Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Select amount of CO2 to offset,2026-10-09T10:21:15.576Z,2026-10-09T10:21:15.576Z,Citizen,offset-service,6.5,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Reserve renewable energy credits,2026-10-09T10:21:16.056Z,2026-10-09T10:21:30.336Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Process payment for offset units,2026-10-09T10:21:30.336Z,2026-10-09T10:21:36.156Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Retire credits under citizen name,2026-10-09T10:21:36.156Z,2026-10-09T10:22:32.676Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Mint and issue offset certificate,2026-10-09T10:22:32.676Z,2026-10-09T10:22:32.676Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+9cdbfe0a-5f07-4140-95eb-b6b0017e531f,Update net emissions score and database,2026-10-09T10:22:32.796Z,2026-10-09T10:22:32.796Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+2677bae3-3833-4e5f-939c-9a82cda455fe,Initiate assessment,2026-10-09T10:17:52.776Z,2026-10-09T10:17:52.776Z,Citizen,footprint-service,6.1,Record footprint baseline
+2677bae3-3833-4e5f-939c-9a82cda455fe,Calculate footprint,2026-10-09T10:17:52.776Z,2026-10-09T10:17:52.776Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+2677bae3-3833-4e5f-939c-9a82cda455fe,Present footprint report and peer comparison,2026-10-09T10:17:52.836Z,2026-10-09T10:17:52.836Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+2677bae3-3833-4e5f-939c-9a82cda455fe,Record footprint baseline,2026-10-09T10:23:21.216Z,2026-10-09T10:23:21.216Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+86a9a789-9a29-47c5-9266-8e694efda416,Initiate assessment,2026-10-09T10:18:58.596Z,2026-10-09T10:18:58.596Z,Citizen,footprint-service,6.1,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Calculate footprint,2026-10-09T10:18:58.596Z,2026-10-09T10:18:58.596Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Present footprint report and peer comparison,2026-10-09T10:18:58.656Z,2026-10-09T10:18:58.656Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Select amount of CO2 to offset,2026-10-09T10:23:11.496Z,2026-10-09T10:23:11.496Z,Citizen,offset-service,6.5,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Reserve reforestation credits,2026-10-09T10:23:11.616Z,2026-10-09T10:23:27.276Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Process payment for offset units,2026-10-09T10:23:27.336Z,2026-10-09T10:23:34.656Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Retire credits under citizen name,2026-10-09T10:23:34.716Z,2026-10-09T10:24:53.496Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Mint and issue offset certificate,2026-10-09T10:24:53.496Z,2026-10-09T10:24:53.496Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+86a9a789-9a29-47c5-9266-8e694efda416,Update net emissions score and database,2026-10-09T10:24:53.736Z,2026-10-09T10:24:53.736Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+aae63f1d-eaa6-4b69-8afc-ba4282debd10,Initiate assessment,2026-10-09T10:19:15.336Z,2026-10-09T10:19:15.336Z,Citizen,footprint-service,6.1,Record footprint baseline
+aae63f1d-eaa6-4b69-8afc-ba4282debd10,Calculate footprint,2026-10-09T10:19:15.336Z,2026-10-09T10:19:15.336Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+aae63f1d-eaa6-4b69-8afc-ba4282debd10,Present footprint report and peer comparison,2026-10-09T10:19:15.336Z,2026-10-09T10:19:15.336Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+aae63f1d-eaa6-4b69-8afc-ba4282debd10,Record footprint baseline,2026-10-09T10:25:04.716Z,2026-10-09T10:25:04.716Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Initiate assessment,2026-10-09T10:19:20.196Z,2026-10-09T10:19:20.196Z,Citizen,footprint-service,6.1,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Calculate footprint,2026-10-09T10:19:20.196Z,2026-10-09T10:19:20.196Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Present footprint report and peer comparison,2026-10-09T10:19:20.196Z,2026-10-09T10:19:20.196Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Select amount of CO2 to offset,2026-10-09T10:26:10.536Z,2026-10-09T10:26:10.536Z,Citizen,offset-service,6.5,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Reserve reforestation credits,2026-10-09T10:26:10.656Z,2026-10-09T10:26:24.816Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Reserve renewable energy credits,2026-10-09T10:26:10.656Z,2026-10-09T10:26:48.096Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Process payment for offset units,2026-10-09T10:26:48.096Z,2026-10-09T10:26:57.816Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Retire credits under citizen name,2026-10-09T10:26:57.876Z,2026-10-09T10:27:50.136Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Mint and issue offset certificate,2026-10-09T10:27:50.196Z,2026-10-09T10:27:50.196Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+12f595e8-8d94-4b9b-a185-ef9941a84e85,Update net emissions score and database,2026-10-09T10:27:50.316Z,2026-10-09T10:27:50.316Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+eb31cbc1-a441-4670-9ba5-85701110e1f0,Initiate assessment,2026-10-09T10:19:21.516Z,2026-10-09T10:19:21.516Z,Citizen,footprint-service,6.1,Record footprint baseline
+eb31cbc1-a441-4670-9ba5-85701110e1f0,Calculate footprint,2026-10-09T10:19:21.516Z,2026-10-09T10:19:21.516Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+eb31cbc1-a441-4670-9ba5-85701110e1f0,Present footprint report and peer comparison,2026-10-09T10:19:21.516Z,2026-10-09T10:19:21.516Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+eb31cbc1-a441-4670-9ba5-85701110e1f0,Record footprint baseline,2026-10-09T10:20:50.256Z,2026-10-09T10:20:50.256Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+be086638-d19c-4864-854e-1289bfe0a9d5,Initiate assessment,2026-10-09T10:19:56.376Z,2026-10-09T10:19:56.376Z,Citizen,footprint-service,6.1,Record footprint baseline
+be086638-d19c-4864-854e-1289bfe0a9d5,Calculate footprint,2026-10-09T10:19:56.436Z,2026-10-09T10:19:56.436Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+be086638-d19c-4864-854e-1289bfe0a9d5,Present footprint report and peer comparison,2026-10-09T10:19:56.436Z,2026-10-09T10:19:56.436Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+be086638-d19c-4864-854e-1289bfe0a9d5,Record footprint baseline,2026-10-09T10:25:56.496Z,2026-10-09T10:25:56.496Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+ede2e16d-0cc0-4bc1-8334-1ac762573094,Initiate assessment,2026-10-09T10:19:58.476Z,2026-10-09T10:19:58.476Z,Citizen,footprint-service,6.1,Record footprint baseline
+ede2e16d-0cc0-4bc1-8334-1ac762573094,Calculate footprint,2026-10-09T10:19:58.476Z,2026-10-09T10:19:58.476Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+ede2e16d-0cc0-4bc1-8334-1ac762573094,Present footprint report and peer comparison,2026-10-09T10:19:58.476Z,2026-10-09T10:19:58.476Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+ede2e16d-0cc0-4bc1-8334-1ac762573094,Record footprint baseline,2026-10-09T10:25:46.836Z,2026-10-09T10:25:46.836Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Initiate assessment,2026-10-09T10:20:32.556Z,2026-10-09T10:20:32.556Z,Citizen,footprint-service,6.1,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Calculate footprint,2026-10-09T10:20:32.616Z,2026-10-09T10:20:32.616Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Present footprint report and peer comparison,2026-10-09T10:20:32.616Z,2026-10-09T10:20:32.616Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Select amount of CO2 to offset,2026-10-09T10:29:04.776Z,2026-10-09T10:29:04.776Z,Citizen,offset-service,6.5,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Reserve reforestation credits,2026-10-09T10:29:04.956Z,2026-10-09T10:29:28.356Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Process payment for offset units,2026-10-09T10:29:28.356Z,2026-10-09T10:29:35.976Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Retire credits under citizen name,2026-10-09T10:29:35.976Z,2026-10-09T10:30:39.696Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Mint and issue offset certificate,2026-10-09T10:30:39.696Z,2026-10-09T10:30:39.696Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+b029e555-d6a3-4a5d-82b9-998eeb7ce8c3,Update net emissions score and database,2026-10-09T10:30:39.816Z,2026-10-09T10:30:39.816Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+490730c1-c851-4b3b-8c3e-f6dc2442b764,Initiate assessment,2026-10-09T10:20:45.396Z,2026-10-09T10:20:45.396Z,Citizen,footprint-service,6.1,Record footprint baseline
+490730c1-c851-4b3b-8c3e-f6dc2442b764,Calculate footprint,2026-10-09T10:20:45.456Z,2026-10-09T10:20:45.456Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+490730c1-c851-4b3b-8c3e-f6dc2442b764,Present footprint report and peer comparison,2026-10-09T10:20:45.456Z,2026-10-09T10:20:45.456Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+490730c1-c851-4b3b-8c3e-f6dc2442b764,Record footprint baseline,2026-10-09T10:22:08.256Z,2026-10-09T10:22:08.256Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+b0492074-5ff8-4103-9e5b-3322945996fe,Initiate assessment,2026-10-09T10:20:56.916Z,2026-10-09T10:20:56.916Z,Citizen,footprint-service,6.1,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Calculate footprint,2026-10-09T10:20:56.916Z,2026-10-09T10:20:56.916Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Present footprint report and peer comparison,2026-10-09T10:20:56.916Z,2026-10-09T10:20:56.916Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Select amount of CO2 to offset,2026-10-09T10:24:55.356Z,2026-10-09T10:24:55.356Z,Citizen,offset-service,6.5,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Reserve reforestation credits,2026-10-09T10:24:55.476Z,2026-10-09T10:25:15.216Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Process payment for offset units,2026-10-09T10:25:15.216Z,2026-10-09T10:25:24.396Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Retire credits under citizen name,2026-10-09T10:25:24.396Z,2026-10-09T10:26:38.916Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Mint and issue offset certificate,2026-10-09T10:26:38.976Z,2026-10-09T10:26:38.976Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+b0492074-5ff8-4103-9e5b-3322945996fe,Update net emissions score and database,2026-10-09T10:26:39.216Z,2026-10-09T10:26:39.216Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+7b67da12-18b1-4243-9b30-21534851952f,Initiate assessment,2026-10-09T10:21:09.876Z,2026-10-09T10:21:09.876Z,Citizen,footprint-service,6.1,Record footprint baseline
+7b67da12-18b1-4243-9b30-21534851952f,Calculate footprint,2026-10-09T10:21:09.876Z,2026-10-09T10:21:09.876Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+7b67da12-18b1-4243-9b30-21534851952f,Present footprint report and peer comparison,2026-10-09T10:21:09.936Z,2026-10-09T10:21:09.936Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+7b67da12-18b1-4243-9b30-21534851952f,Record footprint baseline,2026-10-09T10:23:49.116Z,2026-10-09T10:23:49.116Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+579ea625-f9e3-416f-b8ba-947510b51818,Initiate assessment,2026-10-09T10:21:30.396Z,2026-10-09T10:21:30.396Z,Citizen,footprint-service,6.1,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Calculate footprint,2026-10-09T10:21:30.456Z,2026-10-09T10:21:30.456Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Present footprint report and peer comparison,2026-10-09T10:21:30.456Z,2026-10-09T10:21:30.456Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Select amount of CO2 to offset,2026-10-09T10:24:26.976Z,2026-10-09T10:24:26.976Z,Citizen,offset-service,6.5,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Reserve renewable energy credits,2026-10-09T10:24:27.096Z,2026-10-09T10:24:39.156Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Reserve reforestation credits,2026-10-09T10:24:27.096Z,2026-10-09T10:24:47.976Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Process payment for offset units,2026-10-09T10:24:47.976Z,2026-10-09T10:24:56.316Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Retire credits under citizen name,2026-10-09T10:24:56.376Z,2026-10-09T10:26:29.496Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Mint and issue offset certificate,2026-10-09T10:26:29.496Z,2026-10-09T10:26:29.496Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+579ea625-f9e3-416f-b8ba-947510b51818,Update net emissions score and database,2026-10-09T10:26:29.616Z,2026-10-09T10:26:29.616Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+6977ba1b-6427-48d6-b20b-11e690d0e94a,Initiate assessment,2026-10-09T10:21:39.156Z,2026-10-09T10:21:39.156Z,Citizen,footprint-service,6.1,Record footprint baseline
+6977ba1b-6427-48d6-b20b-11e690d0e94a,Calculate footprint,2026-10-09T10:21:39.156Z,2026-10-09T10:21:39.156Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+6977ba1b-6427-48d6-b20b-11e690d0e94a,Present footprint report and peer comparison,2026-10-09T10:21:39.216Z,2026-10-09T10:21:39.216Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+6977ba1b-6427-48d6-b20b-11e690d0e94a,Record footprint baseline,2026-10-09T10:26:44.556Z,2026-10-09T10:26:44.556Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+66b129dc-2e80-4757-8040-89f3582450b8,Initiate assessment,2026-10-09T10:21:45.876Z,2026-10-09T10:21:45.876Z,Citizen,footprint-service,6.1,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Calculate footprint,2026-10-09T10:21:45.876Z,2026-10-09T10:21:45.876Z,Assessment Service,footprint-service,6.2,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Present footprint report and peer comparison,2026-10-09T10:21:45.876Z,2026-10-09T10:21:45.876Z,Assessment Service,footprint-service,6.3,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Select amount of CO2 to offset,2026-10-09T10:29:05.496Z,2026-10-09T10:29:05.496Z,Citizen,offset-service,6.5,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Reserve reforestation credits,2026-10-09T10:29:07.476Z,2026-10-09T10:29:28.176Z,Offset Marketplace,offset-service,6.7,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Reserve renewable energy credits,2026-10-09T10:29:07.536Z,2026-10-09T10:29:27.516Z,Offset Marketplace,offset-service,6.7,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Process payment for offset units,2026-10-09T10:29:28.176Z,2026-10-09T10:29:36.516Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Notify citizen of payment failure,2026-10-09T10:29:36.576Z,2026-10-09T10:29:36.576Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Process payment for offset units,2026-10-09T10:30:36.576Z,2026-10-09T10:30:40.776Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Notify citizen of payment failure,2026-10-09T10:30:40.776Z,2026-10-09T10:30:40.776Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Process payment for offset units,2026-10-09T10:32:40.836Z,2026-10-09T10:32:49.176Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Notify citizen of payment failure,2026-10-09T10:32:49.236Z,2026-10-09T10:32:49.236Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Process payment for offset units,2026-10-09T10:35:49.236Z,2026-10-09T10:35:54.936Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+66b129dc-2e80-4757-8040-89f3582450b8,Offset purchase cancelled (payment failed),2026-10-09T10:35:54.936Z,2026-10-09T10:35:54.936Z,Offset Marketplace,offset-service,,Offset purchase cancelled (payment failed)
+ea34efd0-bdf7-48d4-8303-f87e080f2233,Initiate assessment,2026-10-09T10:21:49.776Z,2026-10-09T10:21:49.776Z,Citizen,footprint-service,6.1,Record footprint baseline
+ea34efd0-bdf7-48d4-8303-f87e080f2233,Calculate footprint,2026-10-09T10:21:49.776Z,2026-10-09T10:21:49.776Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+ea34efd0-bdf7-48d4-8303-f87e080f2233,Present footprint report and peer comparison,2026-10-09T10:21:49.776Z,2026-10-09T10:21:49.776Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+ea34efd0-bdf7-48d4-8303-f87e080f2233,Record footprint baseline,2026-10-09T10:26:35.616Z,2026-10-09T10:26:35.616Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+19063891-c7be-4abe-9cee-c59949fdcf6d,Initiate assessment,2026-10-09T10:21:52.296Z,2026-10-09T10:21:52.296Z,Citizen,footprint-service,6.1,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Calculate footprint,2026-10-09T10:21:52.296Z,2026-10-09T10:21:52.296Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Present footprint report and peer comparison,2026-10-09T10:21:52.296Z,2026-10-09T10:21:52.296Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Select amount of CO2 to offset,2026-10-09T10:30:06.576Z,2026-10-09T10:30:06.576Z,Citizen,offset-service,6.5,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Reserve reforestation credits,2026-10-09T10:30:06.756Z,2026-10-09T10:30:25.476Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Reserve waste recycling credits,2026-10-09T10:30:06.756Z,2026-10-09T10:30:39.096Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Process payment for offset units,2026-10-09T10:30:39.156Z,2026-10-09T10:30:47.976Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Retire credits under citizen name,2026-10-09T10:30:47.976Z,2026-10-09T10:32:13.056Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Mint and issue offset certificate,2026-10-09T10:32:13.116Z,2026-10-09T10:32:13.116Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+19063891-c7be-4abe-9cee-c59949fdcf6d,Update net emissions score and database,2026-10-09T10:32:13.236Z,2026-10-09T10:32:13.236Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+cc810b1a-6ebd-4a9a-9be0-467de524aa01,Initiate assessment,2026-10-09T10:22:09.636Z,2026-10-09T10:22:09.636Z,Citizen,footprint-service,6.1,Record footprint baseline
+cc810b1a-6ebd-4a9a-9be0-467de524aa01,Calculate footprint,2026-10-09T10:22:09.636Z,2026-10-09T10:22:09.636Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+cc810b1a-6ebd-4a9a-9be0-467de524aa01,Present footprint report and peer comparison,2026-10-09T10:22:09.696Z,2026-10-09T10:22:09.696Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+cc810b1a-6ebd-4a9a-9be0-467de524aa01,Record footprint baseline,2026-10-09T10:25:03.276Z,2026-10-09T10:25:03.276Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Initiate assessment,2026-10-09T10:23:06.876Z,2026-10-09T10:23:06.876Z,Citizen,footprint-service,6.1,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Calculate footprint,2026-10-09T10:23:06.876Z,2026-10-09T10:23:06.876Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Present footprint report and peer comparison,2026-10-09T10:23:06.936Z,2026-10-09T10:23:06.936Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Select amount of CO2 to offset,2026-10-09T10:31:35.556Z,2026-10-09T10:31:35.556Z,Citizen,offset-service,6.5,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Reserve reforestation credits,2026-10-09T10:31:35.616Z,2026-10-09T10:32:04.956Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Process payment for offset units,2026-10-09T10:32:04.956Z,2026-10-09T10:32:11.316Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Retire credits under citizen name,2026-10-09T10:32:11.376Z,2026-10-09T10:33:02.436Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Mint and issue offset certificate,2026-10-09T10:33:02.496Z,2026-10-09T10:33:02.496Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+11a4cc65-d187-4eb5-b056-908b73ad3b17,Update net emissions score and database,2026-10-09T10:33:02.796Z,2026-10-09T10:33:02.796Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Initiate assessment,2026-10-09T10:25:12.936Z,2026-10-09T10:25:12.936Z,Citizen,footprint-service,6.1,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Calculate footprint,2026-10-09T10:25:12.936Z,2026-10-09T10:25:12.936Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Present footprint report and peer comparison,2026-10-09T10:25:12.936Z,2026-10-09T10:25:12.936Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Select amount of CO2 to offset,2026-10-09T10:30:49.356Z,2026-10-09T10:30:49.356Z,Citizen,offset-service,6.5,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Reserve reforestation credits,2026-10-09T10:30:49.416Z,2026-10-09T10:31:14.616Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Reserve renewable energy credits,2026-10-09T10:30:49.476Z,2026-10-09T10:31:27.996Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Process payment for offset units,2026-10-09T10:31:27.996Z,2026-10-09T10:31:34.356Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Retire credits under citizen name,2026-10-09T10:31:34.416Z,2026-10-09T10:33:06.636Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Mint and issue offset certificate,2026-10-09T10:33:06.696Z,2026-10-09T10:33:06.696Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+8858434a-560b-429a-9016-04254eaa8d52,Update net emissions score and database,2026-10-09T10:33:06.996Z,2026-10-09T10:33:06.996Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+10d707f7-25fc-4b4c-80cc-af8fc30d1989,Initiate assessment,2026-10-09T10:25:30.156Z,2026-10-09T10:25:30.156Z,Citizen,footprint-service,6.1,Record footprint baseline
+10d707f7-25fc-4b4c-80cc-af8fc30d1989,Calculate footprint,2026-10-09T10:25:30.156Z,2026-10-09T10:25:30.156Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+10d707f7-25fc-4b4c-80cc-af8fc30d1989,Present footprint report and peer comparison,2026-10-09T10:25:30.216Z,2026-10-09T10:25:30.216Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+10d707f7-25fc-4b4c-80cc-af8fc30d1989,Record footprint baseline,2026-10-09T10:26:58.536Z,2026-10-09T10:26:58.536Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+84251277-4477-46bc-a666-087334d564a8,Initiate assessment,2026-10-09T10:26:34.716Z,2026-10-09T10:26:34.716Z,Citizen,footprint-service,6.1,Record footprint baseline
+84251277-4477-46bc-a666-087334d564a8,Calculate footprint,2026-10-09T10:26:34.716Z,2026-10-09T10:26:34.716Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+84251277-4477-46bc-a666-087334d564a8,Present footprint report and peer comparison,2026-10-09T10:26:34.716Z,2026-10-09T10:26:34.716Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+84251277-4477-46bc-a666-087334d564a8,Record footprint baseline,2026-10-09T10:29:57.036Z,2026-10-09T10:29:57.036Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+8896f24f-4c27-40b3-8ff2-7e1aebf5ef1d,Initiate assessment,2026-10-09T10:26:35.496Z,2026-10-09T10:26:35.496Z,Citizen,footprint-service,6.1,Record footprint baseline
+8896f24f-4c27-40b3-8ff2-7e1aebf5ef1d,Calculate footprint,2026-10-09T10:26:35.496Z,2026-10-09T10:26:35.496Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+8896f24f-4c27-40b3-8ff2-7e1aebf5ef1d,Present footprint report and peer comparison,2026-10-09T10:26:35.496Z,2026-10-09T10:26:35.496Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+8896f24f-4c27-40b3-8ff2-7e1aebf5ef1d,Record footprint baseline,2026-10-09T10:30:17.076Z,2026-10-09T10:30:17.076Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+5934c055-ed56-4dd5-9c55-47dad19e2606,Initiate assessment,2026-10-09T10:26:59.916Z,2026-10-09T10:26:59.916Z,Citizen,footprint-service,6.1,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Calculate footprint,2026-10-09T10:26:59.916Z,2026-10-09T10:26:59.916Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Present footprint report and peer comparison,2026-10-09T10:26:59.976Z,2026-10-09T10:26:59.976Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Select amount of CO2 to offset,2026-10-09T10:32:38.616Z,2026-10-09T10:32:38.616Z,Citizen,offset-service,6.5,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Reserve reforestation credits,2026-10-09T10:32:39.096Z,2026-10-09T10:33:19.176Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Process payment for offset units,2026-10-09T10:33:19.176Z,2026-10-09T10:33:23.256Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Retire credits under citizen name,2026-10-09T10:33:23.316Z,2026-10-09T10:34:11.856Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Mint and issue offset certificate,2026-10-09T10:34:11.916Z,2026-10-09T10:34:11.916Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+5934c055-ed56-4dd5-9c55-47dad19e2606,Update net emissions score and database,2026-10-09T10:34:12.036Z,2026-10-09T10:34:12.036Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Initiate assessment,2026-10-09T10:27:13.416Z,2026-10-09T10:27:13.416Z,Citizen,footprint-service,6.1,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Calculate footprint,2026-10-09T10:27:13.416Z,2026-10-09T10:27:13.416Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Present footprint report and peer comparison,2026-10-09T10:27:13.476Z,2026-10-09T10:27:13.476Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Select amount of CO2 to offset,2026-10-09T10:34:28.176Z,2026-10-09T10:34:28.176Z,Citizen,offset-service,6.5,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Reserve reforestation credits,2026-10-09T10:34:28.296Z,2026-10-09T10:34:50.256Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Reserve waste recycling credits,2026-10-09T10:34:28.296Z,2026-10-09T10:34:55.236Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Process payment for offset units,2026-10-09T10:34:55.236Z,2026-10-09T10:34:59.136Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Retire credits under citizen name,2026-10-09T10:34:59.196Z,2026-10-09T10:36:24.156Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Mint and issue offset certificate,2026-10-09T10:36:24.156Z,2026-10-09T10:36:24.156Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+8118c5ca-2491-46fe-925e-6a5fb1a5abd5,Update net emissions score and database,2026-10-09T10:36:24.216Z,2026-10-09T10:36:24.216Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+f036b535-ae9a-43ef-a071-89d88f236cb4,Initiate assessment,2026-10-09T10:27:35.316Z,2026-10-09T10:27:35.316Z,Citizen,footprint-service,6.1,Record footprint baseline
+f036b535-ae9a-43ef-a071-89d88f236cb4,Calculate footprint,2026-10-09T10:27:35.316Z,2026-10-09T10:27:35.316Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+f036b535-ae9a-43ef-a071-89d88f236cb4,Present footprint report and peer comparison,2026-10-09T10:27:35.316Z,2026-10-09T10:27:35.316Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+f036b535-ae9a-43ef-a071-89d88f236cb4,Record footprint baseline,2026-10-09T10:31:26.796Z,2026-10-09T10:31:26.796Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Initiate assessment,2026-10-09T10:29:12.036Z,2026-10-09T10:29:12.036Z,Citizen,footprint-service,6.1,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Calculate footprint,2026-10-09T10:29:12.036Z,2026-10-09T10:29:12.036Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Present footprint report and peer comparison,2026-10-09T10:29:12.036Z,2026-10-09T10:29:12.036Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Select amount of CO2 to offset,2026-10-09T10:36:08.496Z,2026-10-09T10:36:08.496Z,Citizen,offset-service,6.5,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Reserve reforestation credits,2026-10-09T10:36:08.736Z,2026-10-09T10:36:29.256Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Process payment for offset units,2026-10-09T10:36:29.256Z,2026-10-09T10:36:38.136Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Retire credits under citizen name,2026-10-09T10:36:38.196Z,2026-10-09T10:37:36.756Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Mint and issue offset certificate,2026-10-09T10:37:36.816Z,2026-10-09T10:37:36.816Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+4f6aa3e2-b26c-4cf3-96df-0358f112f8b3,Update net emissions score and database,2026-10-09T10:37:36.936Z,2026-10-09T10:37:36.936Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Initiate assessment,2026-10-09T10:29:15.996Z,2026-10-09T10:29:15.996Z,Citizen,footprint-service,6.1,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Calculate footprint,2026-10-09T10:29:16.056Z,2026-10-09T10:29:16.056Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Present footprint report and peer comparison,2026-10-09T10:29:16.056Z,2026-10-09T10:29:16.056Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Select amount of CO2 to offset,2026-10-09T10:34:54.456Z,2026-10-09T10:34:54.456Z,Citizen,offset-service,6.5,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Reserve waste recycling credits,2026-10-09T10:34:54.696Z,2026-10-09T10:35:21.876Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Reserve reforestation credits,2026-10-09T10:34:54.696Z,2026-10-09T10:35:30.096Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Reserve renewable energy credits,2026-10-09T10:34:54.696Z,2026-10-09T10:35:31.896Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Process payment for offset units,2026-10-09T10:35:31.896Z,2026-10-09T10:35:37.176Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Retire credits under citizen name,2026-10-09T10:35:37.236Z,2026-10-09T10:37:09.336Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Mint and issue offset certificate,2026-10-09T10:37:09.336Z,2026-10-09T10:37:09.336Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+2f711aad-c7bf-48d1-88ce-41ec773e36bc,Update net emissions score and database,2026-10-09T10:37:09.516Z,2026-10-09T10:37:09.516Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+d96c7d20-6407-42f8-891a-a6bf2d450d44,Initiate assessment,2026-10-09T10:29:40.116Z,2026-10-09T10:29:40.116Z,Citizen,footprint-service,6.1,Record footprint baseline
+d96c7d20-6407-42f8-891a-a6bf2d450d44,Calculate footprint,2026-10-09T10:29:40.116Z,2026-10-09T10:29:40.116Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+d96c7d20-6407-42f8-891a-a6bf2d450d44,Present footprint report and peer comparison,2026-10-09T10:29:40.116Z,2026-10-09T10:29:40.116Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+d96c7d20-6407-42f8-891a-a6bf2d450d44,Record footprint baseline,2026-10-09T10:34:55.956Z,2026-10-09T10:34:55.956Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Initiate assessment,2026-10-09T10:30:15.396Z,2026-10-09T10:30:15.396Z,Citizen,footprint-service,6.1,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Calculate footprint,2026-10-09T10:30:15.396Z,2026-10-09T10:30:15.396Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Present footprint report and peer comparison,2026-10-09T10:30:15.396Z,2026-10-09T10:30:15.396Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Select amount of CO2 to offset,2026-10-09T10:38:19.656Z,2026-10-09T10:38:19.656Z,Citizen,offset-service,6.5,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Reserve renewable energy credits,2026-10-09T10:38:19.776Z,2026-10-09T10:38:41.856Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Reserve waste recycling credits,2026-10-09T10:38:19.776Z,2026-10-09T10:38:47.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Process payment for offset units,2026-10-09T10:38:47.616Z,2026-10-09T10:38:51.576Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Retire credits under citizen name,2026-10-09T10:38:51.636Z,2026-10-09T10:40:12.576Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Mint and issue offset certificate,2026-10-09T10:40:12.576Z,2026-10-09T10:40:12.576Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+5a0ae06b-9673-4af0-8bcf-4fe064d065ed,Update net emissions score and database,2026-10-09T10:40:12.756Z,2026-10-09T10:40:12.756Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+d43a7338-17c1-49c7-abe5-fdbeebbb4728,Initiate assessment,2026-10-09T10:30:20.856Z,2026-10-09T10:30:20.856Z,Citizen,footprint-service,6.1,Record footprint baseline
+d43a7338-17c1-49c7-abe5-fdbeebbb4728,Calculate footprint,2026-10-09T10:30:20.856Z,2026-10-09T10:30:20.856Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+d43a7338-17c1-49c7-abe5-fdbeebbb4728,Present footprint report and peer comparison,2026-10-09T10:30:20.856Z,2026-10-09T10:30:20.856Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+d43a7338-17c1-49c7-abe5-fdbeebbb4728,Record footprint baseline,2026-10-09T10:33:16.056Z,2026-10-09T10:33:16.056Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+184916ea-6202-45ba-ba0f-173912e30402,Initiate assessment,2026-10-09T10:31:11.676Z,2026-10-09T10:31:11.676Z,Citizen,footprint-service,6.1,Record footprint baseline
+184916ea-6202-45ba-ba0f-173912e30402,Calculate footprint,2026-10-09T10:31:11.676Z,2026-10-09T10:31:11.676Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+184916ea-6202-45ba-ba0f-173912e30402,Present footprint report and peer comparison,2026-10-09T10:31:11.736Z,2026-10-09T10:31:11.736Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+184916ea-6202-45ba-ba0f-173912e30402,Record footprint baseline,2026-10-09T10:34:16.236Z,2026-10-09T10:34:16.236Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+194b25c0-11c0-4a55-a197-09e643413e08,Initiate assessment,2026-10-09T10:31:33.036Z,2026-10-09T10:31:33.036Z,Citizen,footprint-service,6.1,Record footprint baseline
+194b25c0-11c0-4a55-a197-09e643413e08,Calculate footprint,2026-10-09T10:31:33.036Z,2026-10-09T10:31:33.036Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+194b25c0-11c0-4a55-a197-09e643413e08,Present footprint report and peer comparison,2026-10-09T10:31:33.036Z,2026-10-09T10:31:33.036Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+194b25c0-11c0-4a55-a197-09e643413e08,Record footprint baseline,2026-10-09T10:35:47.136Z,2026-10-09T10:35:47.136Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+550e4b93-1cc7-402d-a3ce-4bb6f8efa66d,Initiate assessment,2026-10-09T10:32:41.016Z,2026-10-09T10:32:41.016Z,Citizen,footprint-service,6.1,Record footprint baseline
+550e4b93-1cc7-402d-a3ce-4bb6f8efa66d,Calculate footprint,2026-10-09T10:32:41.016Z,2026-10-09T10:32:41.016Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+550e4b93-1cc7-402d-a3ce-4bb6f8efa66d,Present footprint report and peer comparison,2026-10-09T10:32:41.076Z,2026-10-09T10:32:41.076Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+550e4b93-1cc7-402d-a3ce-4bb6f8efa66d,Record footprint baseline,2026-10-09T10:38:25.536Z,2026-10-09T10:38:25.536Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Initiate assessment,2026-10-09T10:32:45.516Z,2026-10-09T10:32:45.516Z,Citizen,footprint-service,6.1,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Calculate footprint,2026-10-09T10:32:45.516Z,2026-10-09T10:32:45.516Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Present footprint report and peer comparison,2026-10-09T10:32:45.516Z,2026-10-09T10:32:45.516Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Select amount of CO2 to offset,2026-10-09T10:35:56.136Z,2026-10-09T10:35:56.136Z,Citizen,offset-service,6.5,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Reserve renewable energy credits,2026-10-09T10:35:56.316Z,2026-10-09T10:36:15.456Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Process payment for offset units,2026-10-09T10:36:15.456Z,2026-10-09T10:36:23.856Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Retire credits under citizen name,2026-10-09T10:36:23.856Z,2026-10-09T10:37:19.656Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Mint and issue offset certificate,2026-10-09T10:37:19.656Z,2026-10-09T10:37:19.656Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+d10f7769-2bcc-4f67-b9af-afab5ff85dac,Update net emissions score and database,2026-10-09T10:37:19.716Z,2026-10-09T10:37:19.716Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Initiate assessment,2026-10-09T10:32:52.476Z,2026-10-09T10:32:52.476Z,Citizen,footprint-service,6.1,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Calculate footprint,2026-10-09T10:32:52.476Z,2026-10-09T10:32:52.476Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Present footprint report and peer comparison,2026-10-09T10:32:52.476Z,2026-10-09T10:32:52.476Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Select amount of CO2 to offset,2026-10-09T10:38:16.296Z,2026-10-09T10:38:16.296Z,Citizen,offset-service,6.5,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Reserve renewable energy credits,2026-10-09T10:38:16.416Z,2026-10-09T10:38:45.276Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Process payment for offset units,2026-10-09T10:38:45.336Z,2026-10-09T10:38:52.176Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Retire credits under citizen name,2026-10-09T10:38:52.176Z,2026-10-09T10:40:15.516Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Mint and issue offset certificate,2026-10-09T10:40:15.516Z,2026-10-09T10:40:15.516Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+cd124b17-f47e-4939-86e0-0dba1a4dda4c,Update net emissions score and database,2026-10-09T10:40:15.576Z,2026-10-09T10:40:15.576Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+1df193e5-17f1-497d-905b-7f637516f1cb,Initiate assessment,2026-10-09T10:33:02.016Z,2026-10-09T10:33:02.016Z,Citizen,footprint-service,6.1,Record footprint baseline
+1df193e5-17f1-497d-905b-7f637516f1cb,Calculate footprint,2026-10-09T10:33:02.016Z,2026-10-09T10:33:02.016Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+1df193e5-17f1-497d-905b-7f637516f1cb,Present footprint report and peer comparison,2026-10-09T10:33:02.076Z,2026-10-09T10:33:02.076Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+1df193e5-17f1-497d-905b-7f637516f1cb,Record footprint baseline,2026-10-09T10:37:22.956Z,2026-10-09T10:37:22.956Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+89f80bb8-39b6-486d-a119-a096662dde86,Initiate assessment,2026-10-09T10:33:04.176Z,2026-10-09T10:33:04.176Z,Citizen,footprint-service,6.1,Record footprint baseline
+89f80bb8-39b6-486d-a119-a096662dde86,Calculate footprint,2026-10-09T10:33:04.176Z,2026-10-09T10:33:04.176Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+89f80bb8-39b6-486d-a119-a096662dde86,Present footprint report and peer comparison,2026-10-09T10:33:04.236Z,2026-10-09T10:33:04.236Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+89f80bb8-39b6-486d-a119-a096662dde86,Record footprint baseline,2026-10-09T10:34:33.576Z,2026-10-09T10:34:33.576Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Initiate assessment,2026-10-09T10:33:53.856Z,2026-10-09T10:33:53.856Z,Citizen,footprint-service,6.1,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Calculate footprint,2026-10-09T10:33:53.856Z,2026-10-09T10:33:53.856Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Present footprint report and peer comparison,2026-10-09T10:33:53.856Z,2026-10-09T10:33:53.856Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Select amount of CO2 to offset,2026-10-09T10:36:54.936Z,2026-10-09T10:36:54.936Z,Citizen,offset-service,6.5,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Reserve reforestation credits,2026-10-09T10:36:55.056Z,2026-10-09T10:37:35.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Process payment for offset units,2026-10-09T10:37:35.496Z,2026-10-09T10:37:40.776Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Retire credits under citizen name,2026-10-09T10:37:40.836Z,2026-10-09T10:38:58.296Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Mint and issue offset certificate,2026-10-09T10:38:58.356Z,2026-10-09T10:38:58.356Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+89024ce5-f524-40ac-99a8-6ffc5982c03a,Update net emissions score and database,2026-10-09T10:38:58.656Z,2026-10-09T10:38:58.656Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Initiate assessment,2026-10-09T10:34:15.096Z,2026-10-09T10:34:15.096Z,Citizen,footprint-service,6.1,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Calculate footprint,2026-10-09T10:34:15.096Z,2026-10-09T10:34:15.096Z,Assessment Service,footprint-service,6.2,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Present footprint report and peer comparison,2026-10-09T10:34:15.096Z,2026-10-09T10:34:15.096Z,Assessment Service,footprint-service,6.3,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Select amount of CO2 to offset,2026-10-09T10:40:54.696Z,2026-10-09T10:40:54.696Z,Citizen,offset-service,6.5,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Reserve waste recycling credits,2026-10-09T10:40:54.816Z,2026-10-09T10:41:22.056Z,Offset Marketplace,offset-service,6.7,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Process payment for offset units,2026-10-09T10:41:22.116Z,2026-10-09T10:41:27.216Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Notify citizen of payment failure,2026-10-09T10:41:27.216Z,2026-10-09T10:41:27.216Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Process payment for offset units,2026-10-09T10:42:27.276Z,2026-10-09T10:42:35.856Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Notify citizen of payment failure,2026-10-09T10:42:35.856Z,2026-10-09T10:42:35.856Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Process payment for offset units,2026-10-09T10:44:35.916Z,2026-10-09T10:44:40.776Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Notify citizen of payment failure,2026-10-09T10:44:40.836Z,2026-10-09T10:44:40.836Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Process payment for offset units,2026-10-09T10:47:40.896Z,2026-10-09T10:47:47.856Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+ba24d262-6745-4a4e-bddd-f01dc93ee8a3,Offset purchase cancelled (payment failed),2026-10-09T10:47:47.916Z,2026-10-09T10:47:47.916Z,Offset Marketplace,offset-service,,Offset purchase cancelled (payment failed)
+b0a8d958-c34e-4a81-a01b-2a49835d3796,Initiate assessment,2026-10-09T10:35:23.676Z,2026-10-09T10:35:23.676Z,Citizen,footprint-service,6.1,Record footprint baseline
+b0a8d958-c34e-4a81-a01b-2a49835d3796,Calculate footprint,2026-10-09T10:35:23.676Z,2026-10-09T10:35:23.676Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+b0a8d958-c34e-4a81-a01b-2a49835d3796,Present footprint report and peer comparison,2026-10-09T10:35:23.676Z,2026-10-09T10:35:23.676Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+b0a8d958-c34e-4a81-a01b-2a49835d3796,Record footprint baseline,2026-10-09T10:41:19.296Z,2026-10-09T10:41:19.296Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+bfa668f9-4d23-42de-a832-8ca7d2ace194,Initiate assessment,2026-10-09T10:35:31.896Z,2026-10-09T10:35:31.896Z,Citizen,footprint-service,6.1,Record footprint baseline
+bfa668f9-4d23-42de-a832-8ca7d2ace194,Calculate footprint,2026-10-09T10:35:31.896Z,2026-10-09T10:35:31.896Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+bfa668f9-4d23-42de-a832-8ca7d2ace194,Present footprint report and peer comparison,2026-10-09T10:35:31.896Z,2026-10-09T10:35:31.896Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+bfa668f9-4d23-42de-a832-8ca7d2ace194,Record footprint baseline,2026-10-09T10:39:54.936Z,2026-10-09T10:39:54.936Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+67de566f-9fb8-4f0a-a908-d66a7506cfa6,Initiate assessment,2026-10-09T10:36:06.636Z,2026-10-09T10:36:06.636Z,Citizen,footprint-service,6.1,Record footprint baseline
+67de566f-9fb8-4f0a-a908-d66a7506cfa6,Calculate footprint,2026-10-09T10:36:06.636Z,2026-10-09T10:36:06.636Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+67de566f-9fb8-4f0a-a908-d66a7506cfa6,Present footprint report and peer comparison,2026-10-09T10:36:06.636Z,2026-10-09T10:36:06.636Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+67de566f-9fb8-4f0a-a908-d66a7506cfa6,Record footprint baseline,2026-10-09T10:40:12.336Z,2026-10-09T10:40:12.336Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+244f2b01-2ebc-4506-8ef6-284db6067604,Initiate assessment,2026-10-09T10:37:08.616Z,2026-10-09T10:37:08.616Z,Citizen,footprint-service,6.1,Record footprint baseline
+244f2b01-2ebc-4506-8ef6-284db6067604,Calculate footprint,2026-10-09T10:37:08.616Z,2026-10-09T10:37:08.616Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+244f2b01-2ebc-4506-8ef6-284db6067604,Present footprint report and peer comparison,2026-10-09T10:37:08.676Z,2026-10-09T10:37:08.676Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+244f2b01-2ebc-4506-8ef6-284db6067604,Record footprint baseline,2026-10-09T10:38:53.916Z,2026-10-09T10:38:53.916Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+5b3f5b8f-8efa-4eb3-b13b-61752b80021a,Initiate assessment,2026-10-09T10:37:51.996Z,2026-10-09T10:37:51.996Z,Citizen,footprint-service,6.1,Record footprint baseline
+5b3f5b8f-8efa-4eb3-b13b-61752b80021a,Calculate footprint,2026-10-09T10:37:51.996Z,2026-10-09T10:37:51.996Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+5b3f5b8f-8efa-4eb3-b13b-61752b80021a,Present footprint report and peer comparison,2026-10-09T10:37:51.996Z,2026-10-09T10:37:51.996Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+5b3f5b8f-8efa-4eb3-b13b-61752b80021a,Record footprint baseline,2026-10-09T10:40:55.356Z,2026-10-09T10:40:55.356Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+90d8e6d4-4bba-4610-bcdf-696071eec7a6,Initiate assessment,2026-10-09T10:38:45.096Z,2026-10-09T10:38:45.096Z,Citizen,footprint-service,6.1,Record footprint baseline
+90d8e6d4-4bba-4610-bcdf-696071eec7a6,Calculate footprint,2026-10-09T10:38:45.156Z,2026-10-09T10:38:45.156Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+90d8e6d4-4bba-4610-bcdf-696071eec7a6,Present footprint report and peer comparison,2026-10-09T10:38:45.156Z,2026-10-09T10:38:45.156Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+90d8e6d4-4bba-4610-bcdf-696071eec7a6,Record footprint baseline,2026-10-09T10:42:00.096Z,2026-10-09T10:42:00.096Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+af394ebd-d4fe-44ce-958a-30be79df625d,Initiate assessment,2026-10-09T10:38:51.756Z,2026-10-09T10:38:51.756Z,Citizen,footprint-service,6.1,Record footprint baseline
+af394ebd-d4fe-44ce-958a-30be79df625d,Calculate footprint,2026-10-09T10:38:51.756Z,2026-10-09T10:38:51.756Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+af394ebd-d4fe-44ce-958a-30be79df625d,Present footprint report and peer comparison,2026-10-09T10:38:51.816Z,2026-10-09T10:38:51.816Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+af394ebd-d4fe-44ce-958a-30be79df625d,Record footprint baseline,2026-10-09T10:40:00.816Z,2026-10-09T10:40:00.816Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+3025558d-65b0-4e26-b007-b31f08adadd1,Initiate assessment,2026-10-09T10:38:53.076Z,2026-10-09T10:38:53.076Z,Citizen,footprint-service,6.1,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Calculate footprint,2026-10-09T10:38:53.076Z,2026-10-09T10:38:53.076Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Present footprint report and peer comparison,2026-10-09T10:38:53.076Z,2026-10-09T10:38:53.076Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Select amount of CO2 to offset,2026-10-09T10:44:06.036Z,2026-10-09T10:44:06.036Z,Citizen,offset-service,6.5,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Reserve waste recycling credits,2026-10-09T10:44:06.156Z,2026-10-09T10:44:23.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Process payment for offset units,2026-10-09T10:44:23.496Z,2026-10-09T10:44:27.156Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Retire credits under citizen name,2026-10-09T10:44:27.156Z,2026-10-09T10:45:34.116Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Mint and issue offset certificate,2026-10-09T10:45:34.176Z,2026-10-09T10:45:34.176Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+3025558d-65b0-4e26-b007-b31f08adadd1,Update net emissions score and database,2026-10-09T10:45:34.296Z,2026-10-09T10:45:34.296Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Initiate assessment,2026-10-09T10:39:00.816Z,2026-10-09T10:39:00.816Z,Citizen,footprint-service,6.1,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Calculate footprint,2026-10-09T10:39:00.816Z,2026-10-09T10:39:00.816Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Present footprint report and peer comparison,2026-10-09T10:39:00.876Z,2026-10-09T10:39:00.876Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Select amount of CO2 to offset,2026-10-09T10:46:50.136Z,2026-10-09T10:46:50.136Z,Citizen,offset-service,6.5,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Reserve renewable energy credits,2026-10-09T10:46:50.196Z,2026-10-09T10:47:12.816Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Reserve reforestation credits,2026-10-09T10:46:50.196Z,2026-10-09T10:47:20.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Process payment for offset units,2026-10-09T10:47:20.496Z,2026-10-09T10:47:29.136Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Notify citizen of payment failure,2026-10-09T10:47:29.196Z,2026-10-09T10:47:29.196Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Process payment for offset units,2026-10-09T10:48:29.196Z,2026-10-09T10:48:38.796Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Notify citizen of payment failure,2026-10-09T10:48:38.856Z,2026-10-09T10:48:38.856Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Process payment for offset units,2026-10-09T10:50:38.856Z,2026-10-09T10:50:45.576Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Retire credits under citizen name,2026-10-09T10:50:45.636Z,2026-10-09T10:52:01.896Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Mint and issue offset certificate,2026-10-09T10:52:01.896Z,2026-10-09T10:52:01.896Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+61d4cde0-748a-466e-9297-3c486ba5870a,Update net emissions score and database,2026-10-09T10:52:02.016Z,2026-10-09T10:52:02.016Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+4bdb2bd5-3f4d-49e3-be51-ed2373cabbc3,Initiate assessment,2026-10-09T10:39:19.536Z,2026-10-09T10:39:19.536Z,Citizen,footprint-service,6.1,Record footprint baseline
+4bdb2bd5-3f4d-49e3-be51-ed2373cabbc3,Calculate footprint,2026-10-09T10:39:19.536Z,2026-10-09T10:39:19.536Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+4bdb2bd5-3f4d-49e3-be51-ed2373cabbc3,Present footprint report and peer comparison,2026-10-09T10:39:19.536Z,2026-10-09T10:39:19.536Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+4bdb2bd5-3f4d-49e3-be51-ed2373cabbc3,Record footprint baseline,2026-10-09T10:41:49.176Z,2026-10-09T10:41:49.176Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Initiate assessment,2026-10-09T10:39:23.376Z,2026-10-09T10:39:23.376Z,Citizen,footprint-service,6.1,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Calculate footprint,2026-10-09T10:39:23.376Z,2026-10-09T10:39:23.376Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Present footprint report and peer comparison,2026-10-09T10:39:23.436Z,2026-10-09T10:39:23.436Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Select amount of CO2 to offset,2026-10-09T10:43:24.096Z,2026-10-09T10:43:24.096Z,Citizen,offset-service,6.5,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Reserve reforestation credits,2026-10-09T10:43:24.156Z,2026-10-09T10:44:02.796Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Reserve renewable energy credits,2026-10-09T10:43:24.216Z,2026-10-09T10:43:51.876Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Process payment for offset units,2026-10-09T10:44:02.856Z,2026-10-09T10:44:12.996Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Retire credits under citizen name,2026-10-09T10:44:12.996Z,2026-10-09T10:45:04.596Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Mint and issue offset certificate,2026-10-09T10:45:04.656Z,2026-10-09T10:45:04.656Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+b3c48ca7-de21-4eba-b6d2-804c0d542e2a,Update net emissions score and database,2026-10-09T10:45:05.016Z,2026-10-09T10:45:05.016Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Initiate assessment,2026-10-09T10:39:34.776Z,2026-10-09T10:39:34.776Z,Citizen,footprint-service,6.1,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Calculate footprint,2026-10-09T10:39:34.776Z,2026-10-09T10:39:34.776Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Present footprint report and peer comparison,2026-10-09T10:39:34.776Z,2026-10-09T10:39:34.776Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Select amount of CO2 to offset,2026-10-09T10:44:14.736Z,2026-10-09T10:44:14.736Z,Citizen,offset-service,6.5,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Reserve reforestation credits,2026-10-09T10:44:14.856Z,2026-10-09T10:44:27.876Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Process payment for offset units,2026-10-09T10:44:27.876Z,2026-10-09T10:44:38.016Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Retire credits under citizen name,2026-10-09T10:44:38.076Z,2026-10-09T10:46:12.816Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Mint and issue offset certificate,2026-10-09T10:46:12.816Z,2026-10-09T10:46:12.816Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+2f61720d-7e3e-4249-9f96-390338f85731,Update net emissions score and database,2026-10-09T10:46:12.876Z,2026-10-09T10:46:12.876Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Initiate assessment,2026-10-09T10:40:30.216Z,2026-10-09T10:40:30.216Z,Citizen,footprint-service,6.1,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Calculate footprint,2026-10-09T10:40:30.216Z,2026-10-09T10:40:30.216Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Present footprint report and peer comparison,2026-10-09T10:40:30.216Z,2026-10-09T10:40:30.216Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Select amount of CO2 to offset,2026-10-09T10:45:16.536Z,2026-10-09T10:45:16.536Z,Citizen,offset-service,6.5,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Reserve reforestation credits,2026-10-09T10:45:16.656Z,2026-10-09T10:45:53.796Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Process payment for offset units,2026-10-09T10:45:53.856Z,2026-10-09T10:46:02.076Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Retire credits under citizen name,2026-10-09T10:46:02.076Z,2026-10-09T10:46:54.396Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Mint and issue offset certificate,2026-10-09T10:46:54.396Z,2026-10-09T10:46:54.396Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+a51ee737-9a47-4091-b33b-3da2423f82dd,Update net emissions score and database,2026-10-09T10:46:54.516Z,2026-10-09T10:46:54.516Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Initiate assessment,2026-10-09T10:40:40.296Z,2026-10-09T10:40:40.296Z,Citizen,footprint-service,6.1,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Calculate footprint,2026-10-09T10:40:40.296Z,2026-10-09T10:40:40.296Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Present footprint report and peer comparison,2026-10-09T10:40:40.296Z,2026-10-09T10:40:40.296Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Select amount of CO2 to offset,2026-10-09T10:47:56.976Z,2026-10-09T10:47:56.976Z,Citizen,offset-service,6.5,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Reserve reforestation credits,2026-10-09T10:47:57.096Z,2026-10-09T10:48:12.756Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Process payment for offset units,2026-10-09T10:48:12.756Z,2026-10-09T10:48:21.876Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Notify citizen of payment failure,2026-10-09T10:48:21.936Z,2026-10-09T10:48:21.936Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Process payment for offset units,2026-10-09T10:49:21.936Z,2026-10-09T10:49:31.656Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Retire credits under citizen name,2026-10-09T10:49:31.716Z,2026-10-09T10:50:32.496Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Mint and issue offset certificate,2026-10-09T10:50:32.496Z,2026-10-09T10:50:32.496Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+32baf1eb-0e33-458a-b776-845560c40ca5,Update net emissions score and database,2026-10-09T10:50:32.856Z,2026-10-09T10:50:32.856Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+0eac0d3b-caef-42a2-b694-5c45118f61d4,Initiate assessment,2026-10-09T10:41:47.736Z,2026-10-09T10:41:47.736Z,Citizen,footprint-service,6.1,Record footprint baseline
+0eac0d3b-caef-42a2-b694-5c45118f61d4,Calculate footprint,2026-10-09T10:41:47.736Z,2026-10-09T10:41:47.736Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+0eac0d3b-caef-42a2-b694-5c45118f61d4,Present footprint report and peer comparison,2026-10-09T10:41:47.736Z,2026-10-09T10:41:47.736Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+0eac0d3b-caef-42a2-b694-5c45118f61d4,Record footprint baseline,2026-10-09T10:45:50.496Z,2026-10-09T10:45:50.496Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+eab29ba7-6b18-4b44-a137-7ea6e2d7847c,Initiate assessment,2026-10-09T10:42:23.016Z,2026-10-09T10:42:23.016Z,Citizen,footprint-service,6.1,Record footprint baseline
+eab29ba7-6b18-4b44-a137-7ea6e2d7847c,Calculate footprint,2026-10-09T10:42:23.016Z,2026-10-09T10:42:23.016Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+eab29ba7-6b18-4b44-a137-7ea6e2d7847c,Present footprint report and peer comparison,2026-10-09T10:42:23.076Z,2026-10-09T10:42:23.076Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+eab29ba7-6b18-4b44-a137-7ea6e2d7847c,Record footprint baseline,2026-10-09T10:47:59.556Z,2026-10-09T10:47:59.556Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+65165131-5358-499e-b979-e46826236837,Initiate assessment,2026-10-09T10:42:59.496Z,2026-10-09T10:42:59.496Z,Citizen,footprint-service,6.1,Record footprint baseline
+65165131-5358-499e-b979-e46826236837,Calculate footprint,2026-10-09T10:42:59.556Z,2026-10-09T10:42:59.556Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+65165131-5358-499e-b979-e46826236837,Present footprint report and peer comparison,2026-10-09T10:42:59.556Z,2026-10-09T10:42:59.556Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+65165131-5358-499e-b979-e46826236837,Record footprint baseline,2026-10-09T10:47:21.396Z,2026-10-09T10:47:21.396Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Initiate assessment,2026-10-09T10:43:06.096Z,2026-10-09T10:43:06.096Z,Citizen,footprint-service,6.1,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Calculate footprint,2026-10-09T10:43:06.156Z,2026-10-09T10:43:06.156Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Present footprint report and peer comparison,2026-10-09T10:43:06.156Z,2026-10-09T10:43:06.156Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Select amount of CO2 to offset,2026-10-09T10:49:32.076Z,2026-10-09T10:49:32.076Z,Citizen,offset-service,6.5,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Reserve reforestation credits,2026-10-09T10:49:32.196Z,2026-10-09T10:50:12.696Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Process payment for offset units,2026-10-09T10:50:12.696Z,2026-10-09T10:50:22.836Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Retire credits under citizen name,2026-10-09T10:50:22.896Z,2026-10-09T10:51:52.176Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Mint and issue offset certificate,2026-10-09T10:51:52.236Z,2026-10-09T10:51:52.236Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+91aaf1a6-28d1-433a-ae00-33a71fc10c06,Update net emissions score and database,2026-10-09T10:51:52.356Z,2026-10-09T10:51:52.356Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+4f942a32-8df8-4276-aaff-42c352e2d2a9,Initiate assessment,2026-10-09T10:43:08.076Z,2026-10-09T10:43:08.076Z,Citizen,footprint-service,6.1,Record footprint baseline
+4f942a32-8df8-4276-aaff-42c352e2d2a9,Calculate footprint,2026-10-09T10:43:08.076Z,2026-10-09T10:43:08.076Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+4f942a32-8df8-4276-aaff-42c352e2d2a9,Present footprint report and peer comparison,2026-10-09T10:43:08.076Z,2026-10-09T10:43:08.076Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+4f942a32-8df8-4276-aaff-42c352e2d2a9,Record footprint baseline,2026-10-09T10:44:20.616Z,2026-10-09T10:44:20.616Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Initiate assessment,2026-10-09T10:44:06.816Z,2026-10-09T10:44:06.816Z,Citizen,footprint-service,6.1,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Calculate footprint,2026-10-09T10:44:06.816Z,2026-10-09T10:44:06.816Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Present footprint report and peer comparison,2026-10-09T10:44:06.816Z,2026-10-09T10:44:06.816Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Select amount of CO2 to offset,2026-10-09T10:52:10.476Z,2026-10-09T10:52:10.476Z,Citizen,offset-service,6.5,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Reserve reforestation credits,2026-10-09T10:52:10.536Z,2026-10-09T10:52:27.456Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Reserve renewable energy credits,2026-10-09T10:52:10.536Z,2026-10-09T10:52:38.736Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Process payment for offset units,2026-10-09T10:52:38.796Z,2026-10-09T10:52:42.396Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Retire credits under citizen name,2026-10-09T10:52:42.396Z,2026-10-09T10:54:01.236Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Mint and issue offset certificate,2026-10-09T10:54:01.296Z,2026-10-09T10:54:01.296Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+91c44bb5-0478-42c0-a16d-8e8ebc8d50a6,Update net emissions score and database,2026-10-09T10:54:01.416Z,2026-10-09T10:54:01.416Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+76823cc8-56f7-4d3d-a300-6b96a1703e54,Initiate assessment,2026-10-09T10:44:09.396Z,2026-10-09T10:44:09.396Z,Citizen,footprint-service,6.1,Record footprint baseline
+76823cc8-56f7-4d3d-a300-6b96a1703e54,Calculate footprint,2026-10-09T10:44:09.396Z,2026-10-09T10:44:09.396Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+76823cc8-56f7-4d3d-a300-6b96a1703e54,Present footprint report and peer comparison,2026-10-09T10:44:09.396Z,2026-10-09T10:44:09.396Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+76823cc8-56f7-4d3d-a300-6b96a1703e54,Record footprint baseline,2026-10-09T10:46:23.256Z,2026-10-09T10:46:23.256Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Initiate assessment,2026-10-09T10:44:10.716Z,2026-10-09T10:44:10.716Z,Citizen,footprint-service,6.1,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Calculate footprint,2026-10-09T10:44:10.716Z,2026-10-09T10:44:10.716Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Present footprint report and peer comparison,2026-10-09T10:44:10.716Z,2026-10-09T10:44:10.716Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Select amount of CO2 to offset,2026-10-09T10:50:29.676Z,2026-10-09T10:50:29.676Z,Citizen,offset-service,6.5,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Reserve reforestation credits,2026-10-09T10:50:29.976Z,2026-10-09T10:50:46.836Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Reserve waste recycling credits,2026-10-09T10:50:29.976Z,2026-10-09T10:51:08.076Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Process payment for offset units,2026-10-09T10:51:08.076Z,2026-10-09T10:51:18.816Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Retire credits under citizen name,2026-10-09T10:51:18.816Z,2026-10-09T10:52:25.296Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Mint and issue offset certificate,2026-10-09T10:52:25.356Z,2026-10-09T10:52:25.356Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+a2cb7d4d-402b-4635-97fd-b7d7855e0227,Update net emissions score and database,2026-10-09T10:52:25.476Z,2026-10-09T10:52:25.476Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Initiate assessment,2026-10-09T10:44:46.956Z,2026-10-09T10:44:46.956Z,Citizen,footprint-service,6.1,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Calculate footprint,2026-10-09T10:44:47.016Z,2026-10-09T10:44:47.016Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Present footprint report and peer comparison,2026-10-09T10:44:47.076Z,2026-10-09T10:44:47.076Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Select amount of CO2 to offset,2026-10-09T10:54:19.596Z,2026-10-09T10:54:19.596Z,Citizen,offset-service,6.5,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Reserve reforestation credits,2026-10-09T10:54:19.716Z,2026-10-09T10:54:54.456Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Process payment for offset units,2026-10-09T10:54:54.456Z,2026-10-09T10:55:04.776Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Retire credits under citizen name,2026-10-09T10:55:04.776Z,2026-10-09T10:56:30.096Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Mint and issue offset certificate,2026-10-09T10:56:30.096Z,2026-10-09T10:56:30.096Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+9ca52ba9-e08c-47d9-bf44-40776b06d716,Update net emissions score and database,2026-10-09T10:56:30.216Z,2026-10-09T10:56:30.216Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+95d45cad-18ac-4697-904f-4fa25302df66,Initiate assessment,2026-10-09T10:45:18.876Z,2026-10-09T10:45:18.876Z,Citizen,footprint-service,6.1,Record footprint baseline
+95d45cad-18ac-4697-904f-4fa25302df66,Calculate footprint,2026-10-09T10:45:18.876Z,2026-10-09T10:45:18.876Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+95d45cad-18ac-4697-904f-4fa25302df66,Present footprint report and peer comparison,2026-10-09T10:45:18.876Z,2026-10-09T10:45:18.876Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+95d45cad-18ac-4697-904f-4fa25302df66,Record footprint baseline,2026-10-09T10:47:28.236Z,2026-10-09T10:47:28.236Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+bd15f733-c851-4a7e-b6ad-54b28aeed2df,Initiate assessment,2026-10-09T10:46:42.576Z,2026-10-09T10:46:42.576Z,Citizen,footprint-service,6.1,Record footprint baseline
+bd15f733-c851-4a7e-b6ad-54b28aeed2df,Calculate footprint,2026-10-09T10:46:42.576Z,2026-10-09T10:46:42.576Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+bd15f733-c851-4a7e-b6ad-54b28aeed2df,Present footprint report and peer comparison,2026-10-09T10:46:42.636Z,2026-10-09T10:46:42.636Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+bd15f733-c851-4a7e-b6ad-54b28aeed2df,Record footprint baseline,2026-10-09T10:49:46.356Z,2026-10-09T10:49:46.356Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+c37ddaaf-6a12-4c45-bf1e-2a26414bb17d,Initiate assessment,2026-10-09T10:47:29.556Z,2026-10-09T10:47:29.556Z,Citizen,footprint-service,6.1,Record footprint baseline
+c37ddaaf-6a12-4c45-bf1e-2a26414bb17d,Calculate footprint,2026-10-09T10:47:29.616Z,2026-10-09T10:47:29.616Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+c37ddaaf-6a12-4c45-bf1e-2a26414bb17d,Present footprint report and peer comparison,2026-10-09T10:47:29.616Z,2026-10-09T10:47:29.616Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+c37ddaaf-6a12-4c45-bf1e-2a26414bb17d,Record footprint baseline,2026-10-09T10:49:43.776Z,2026-10-09T10:49:43.776Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Initiate assessment,2026-10-09T10:47:41.136Z,2026-10-09T10:47:41.136Z,Citizen,footprint-service,6.1,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Calculate footprint,2026-10-09T10:47:41.136Z,2026-10-09T10:47:41.136Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Present footprint report and peer comparison,2026-10-09T10:47:41.196Z,2026-10-09T10:47:41.196Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Select amount of CO2 to offset,2026-10-09T10:54:09.336Z,2026-10-09T10:54:09.336Z,Citizen,offset-service,6.5,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Reserve reforestation credits,2026-10-09T10:54:09.396Z,2026-10-09T10:54:28.836Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Reserve renewable energy credits,2026-10-09T10:54:09.456Z,2026-10-09T10:54:45.936Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Process payment for offset units,2026-10-09T10:54:45.936Z,2026-10-09T10:54:50.496Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Retire credits under citizen name,2026-10-09T10:54:50.556Z,2026-10-09T10:56:18.036Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Mint and issue offset certificate,2026-10-09T10:56:18.036Z,2026-10-09T10:56:18.036Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+e941cbc5-8fcd-4201-a2a2-3601cd2ab311,Update net emissions score and database,2026-10-09T10:56:18.156Z,2026-10-09T10:56:18.156Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Initiate assessment,2026-10-09T10:48:09.156Z,2026-10-09T10:48:09.156Z,Citizen,footprint-service,6.1,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Calculate footprint,2026-10-09T10:48:09.156Z,2026-10-09T10:48:09.156Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Present footprint report and peer comparison,2026-10-09T10:48:09.156Z,2026-10-09T10:48:09.156Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Select amount of CO2 to offset,2026-10-09T10:53:01.416Z,2026-10-09T10:53:01.416Z,Citizen,offset-service,6.5,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Reserve waste recycling credits,2026-10-09T10:53:01.536Z,2026-10-09T10:53:22.476Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Process payment for offset units,2026-10-09T10:53:22.476Z,2026-10-09T10:53:28.956Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Retire credits under citizen name,2026-10-09T10:53:29.016Z,2026-10-09T10:54:49.956Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Mint and issue offset certificate,2026-10-09T10:54:49.956Z,2026-10-09T10:54:49.956Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+9973b539-3800-49a3-a265-f071440bbfcc,Update net emissions score and database,2026-10-09T10:54:50.076Z,2026-10-09T10:54:50.076Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Initiate assessment,2026-10-09T10:49:06.936Z,2026-10-09T10:49:06.936Z,Citizen,footprint-service,6.1,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Calculate footprint,2026-10-09T10:49:06.936Z,2026-10-09T10:49:06.936Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Present footprint report and peer comparison,2026-10-09T10:49:06.936Z,2026-10-09T10:49:06.936Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Select amount of CO2 to offset,2026-10-09T10:53:20.016Z,2026-10-09T10:53:20.016Z,Citizen,offset-service,6.5,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Reserve reforestation credits,2026-10-09T10:53:20.076Z,2026-10-09T10:53:51.396Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Process payment for offset units,2026-10-09T10:53:51.456Z,2026-10-09T10:54:01.536Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Notify citizen of payment failure,2026-10-09T10:54:01.596Z,2026-10-09T10:54:01.596Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Process payment for offset units,2026-10-09T10:55:01.596Z,2026-10-09T10:55:11.556Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Notify citizen of payment failure,2026-10-09T10:55:11.556Z,2026-10-09T10:55:11.556Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Process payment for offset units,2026-10-09T10:57:11.616Z,2026-10-09T10:57:18.756Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Retire credits under citizen name,2026-10-09T10:57:18.756Z,2026-10-09T10:58:12.936Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Mint and issue offset certificate,2026-10-09T10:58:12.996Z,2026-10-09T10:58:12.996Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+24d8f61c-94a1-4b80-8fe3-19a2eb671dc8,Update net emissions score and database,2026-10-09T10:58:13.236Z,2026-10-09T10:58:13.236Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+34dcf5eb-29d2-48dd-af65-70ee284795d5,Initiate assessment,2026-10-09T10:49:23.736Z,2026-10-09T10:49:23.736Z,Citizen,footprint-service,6.1,Record footprint baseline
+34dcf5eb-29d2-48dd-af65-70ee284795d5,Calculate footprint,2026-10-09T10:49:23.736Z,2026-10-09T10:49:23.736Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+34dcf5eb-29d2-48dd-af65-70ee284795d5,Present footprint report and peer comparison,2026-10-09T10:49:23.736Z,2026-10-09T10:49:23.736Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+34dcf5eb-29d2-48dd-af65-70ee284795d5,Record footprint baseline,2026-10-09T10:54:04.416Z,2026-10-09T10:54:04.416Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+a6ffa059-c515-4547-a3fe-9c254a87b279,Initiate assessment,2026-10-09T10:50:14.376Z,2026-10-09T10:50:14.376Z,Citizen,footprint-service,6.1,Record footprint baseline
+a6ffa059-c515-4547-a3fe-9c254a87b279,Calculate footprint,2026-10-09T10:50:14.376Z,2026-10-09T10:50:14.376Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+a6ffa059-c515-4547-a3fe-9c254a87b279,Present footprint report and peer comparison,2026-10-09T10:50:14.436Z,2026-10-09T10:50:14.436Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+a6ffa059-c515-4547-a3fe-9c254a87b279,Record footprint baseline,2026-10-09T10:54:10.656Z,2026-10-09T10:54:10.656Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Initiate assessment,2026-10-09T10:50:15.216Z,2026-10-09T10:50:15.216Z,Citizen,footprint-service,6.1,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Calculate footprint,2026-10-09T10:50:15.216Z,2026-10-09T10:50:15.216Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Present footprint report and peer comparison,2026-10-09T10:50:15.276Z,2026-10-09T10:50:15.276Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Select amount of CO2 to offset,2026-10-09T10:57:17.616Z,2026-10-09T10:57:17.616Z,Citizen,offset-service,6.5,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Reserve reforestation credits,2026-10-09T10:57:17.736Z,2026-10-09T10:57:32.736Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Reserve renewable energy credits,2026-10-09T10:57:17.736Z,2026-10-09T10:57:44.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Process payment for offset units,2026-10-09T10:57:44.496Z,2026-10-09T10:57:50.436Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Retire credits under citizen name,2026-10-09T10:57:50.436Z,2026-10-09T10:59:07.716Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Mint and issue offset certificate,2026-10-09T10:59:07.776Z,2026-10-09T10:59:07.776Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+42b1f504-86c5-480d-90ab-4a61a7a959fc,Update net emissions score and database,2026-10-09T10:59:07.836Z,2026-10-09T10:59:07.836Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Initiate assessment,2026-10-09T10:50:34.176Z,2026-10-09T10:50:34.176Z,Citizen,footprint-service,6.1,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Calculate footprint,2026-10-09T10:50:34.176Z,2026-10-09T10:50:34.176Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Present footprint report and peer comparison,2026-10-09T10:50:34.236Z,2026-10-09T10:50:34.236Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Select amount of CO2 to offset,2026-10-09T10:56:54.936Z,2026-10-09T10:56:54.936Z,Citizen,offset-service,6.5,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Reserve waste recycling credits,2026-10-09T10:56:55.056Z,2026-10-09T10:57:13.296Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Process payment for offset units,2026-10-09T10:57:13.296Z,2026-10-09T10:57:21.996Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Retire credits under citizen name,2026-10-09T10:57:21.996Z,2026-10-09T10:58:37.536Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Mint and issue offset certificate,2026-10-09T10:58:37.596Z,2026-10-09T10:58:37.596Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+1d490466-0785-402f-83df-5048c2c19416,Update net emissions score and database,2026-10-09T10:58:37.656Z,2026-10-09T10:58:37.656Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+f74a7494-01e7-45bf-9056-0a7d13b6fe3d,Initiate assessment,2026-10-09T10:50:57.276Z,2026-10-09T10:50:57.276Z,Citizen,footprint-service,6.1,Record footprint baseline
+f74a7494-01e7-45bf-9056-0a7d13b6fe3d,Calculate footprint,2026-10-09T10:50:57.336Z,2026-10-09T10:50:57.336Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+f74a7494-01e7-45bf-9056-0a7d13b6fe3d,Present footprint report and peer comparison,2026-10-09T10:50:57.456Z,2026-10-09T10:50:57.456Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+f74a7494-01e7-45bf-9056-0a7d13b6fe3d,Record footprint baseline,2026-10-09T10:56:05.256Z,2026-10-09T10:56:05.256Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Initiate assessment,2026-10-09T10:51:38.976Z,2026-10-09T10:51:38.976Z,Citizen,footprint-service,6.1,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Calculate footprint,2026-10-09T10:51:38.976Z,2026-10-09T10:51:38.976Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Present footprint report and peer comparison,2026-10-09T10:51:38.976Z,2026-10-09T10:51:38.976Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Select amount of CO2 to offset,2026-10-09T10:56:32.556Z,2026-10-09T10:56:32.556Z,Citizen,offset-service,6.5,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Reserve reforestation credits,2026-10-09T10:56:32.796Z,2026-10-09T10:57:11.196Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Process payment for offset units,2026-10-09T10:57:11.196Z,2026-10-09T10:57:17.796Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Retire credits under citizen name,2026-10-09T10:57:17.856Z,2026-10-09T10:58:37.296Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Mint and issue offset certificate,2026-10-09T10:58:37.296Z,2026-10-09T10:58:37.296Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+3dabc711-28a1-4934-b57b-0cc9f95d7fdb,Update net emissions score and database,2026-10-09T10:58:37.356Z,2026-10-09T10:58:37.356Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Initiate assessment,2026-10-09T10:52:09.096Z,2026-10-09T10:52:09.096Z,Citizen,footprint-service,6.1,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Calculate footprint,2026-10-09T10:52:09.096Z,2026-10-09T10:52:09.096Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Present footprint report and peer comparison,2026-10-09T10:52:09.096Z,2026-10-09T10:52:09.096Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Select amount of CO2 to offset,2026-10-09T10:59:26.136Z,2026-10-09T10:59:26.136Z,Citizen,offset-service,6.5,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Reserve reforestation credits,2026-10-09T10:59:26.256Z,2026-10-09T10:59:42.936Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Process payment for offset units,2026-10-09T10:59:42.936Z,2026-10-09T10:59:47.376Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Retire credits under citizen name,2026-10-09T10:59:47.376Z,2026-10-09T11:00:40.836Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Mint and issue offset certificate,2026-10-09T11:00:40.896Z,2026-10-09T11:00:40.896Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+6bfa75fa-fcae-43dc-90fe-38951df4a827,Update net emissions score and database,2026-10-09T11:00:40.956Z,2026-10-09T11:00:40.956Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+61fc7506-ca7d-4105-9e3a-dc0ecb64b9a2,Initiate assessment,2026-10-09T10:52:11.556Z,2026-10-09T10:52:11.556Z,Citizen,footprint-service,6.1,Record footprint baseline
+61fc7506-ca7d-4105-9e3a-dc0ecb64b9a2,Calculate footprint,2026-10-09T10:52:11.556Z,2026-10-09T10:52:11.556Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+61fc7506-ca7d-4105-9e3a-dc0ecb64b9a2,Present footprint report and peer comparison,2026-10-09T10:52:11.616Z,2026-10-09T10:52:11.616Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+61fc7506-ca7d-4105-9e3a-dc0ecb64b9a2,Record footprint baseline,2026-10-09T10:54:13.356Z,2026-10-09T10:54:13.356Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Initiate assessment,2026-10-09T10:52:35.196Z,2026-10-09T10:52:35.196Z,Citizen,footprint-service,6.1,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Calculate footprint,2026-10-09T10:52:35.196Z,2026-10-09T10:52:35.196Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Present footprint report and peer comparison,2026-10-09T10:52:35.196Z,2026-10-09T10:52:35.196Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Select amount of CO2 to offset,2026-10-09T10:58:59.796Z,2026-10-09T10:58:59.796Z,Citizen,offset-service,6.5,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Reserve reforestation credits,2026-10-09T10:58:59.916Z,2026-10-09T10:59:24.216Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Process payment for offset units,2026-10-09T10:59:24.276Z,2026-10-09T10:59:29.256Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Notify citizen of payment failure,2026-10-09T10:59:29.256Z,2026-10-09T10:59:29.256Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Process payment for offset units,2026-10-09T11:00:29.256Z,2026-10-09T11:00:38.856Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Notify citizen of payment failure,2026-10-09T11:00:38.856Z,2026-10-09T11:00:38.856Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Process payment for offset units,2026-10-09T11:02:38.856Z,2026-10-09T11:02:46.356Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Retire credits under citizen name,2026-10-09T11:02:46.356Z,2026-10-09T11:04:11.136Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Mint and issue offset certificate,2026-10-09T11:04:11.136Z,2026-10-09T11:04:11.136Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+8b7dd490-658f-4f4e-80ce-185ce8f8d9f6,Update net emissions score and database,2026-10-09T11:04:11.316Z,2026-10-09T11:04:11.316Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+5f7fbcbd-7963-4f7d-8d78-8df7fa0c0fb2,Initiate assessment,2026-10-09T10:52:59.196Z,2026-10-09T10:52:59.196Z,Citizen,footprint-service,6.1,Record footprint baseline
+5f7fbcbd-7963-4f7d-8d78-8df7fa0c0fb2,Calculate footprint,2026-10-09T10:52:59.196Z,2026-10-09T10:52:59.196Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+5f7fbcbd-7963-4f7d-8d78-8df7fa0c0fb2,Present footprint report and peer comparison,2026-10-09T10:52:59.196Z,2026-10-09T10:52:59.196Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+5f7fbcbd-7963-4f7d-8d78-8df7fa0c0fb2,Record footprint baseline,2026-10-09T10:55:15.936Z,2026-10-09T10:55:15.936Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Initiate assessment,2026-10-09T10:53:10.956Z,2026-10-09T10:53:10.956Z,Citizen,footprint-service,6.1,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Calculate footprint,2026-10-09T10:53:10.956Z,2026-10-09T10:53:10.956Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Present footprint report and peer comparison,2026-10-09T10:53:11.016Z,2026-10-09T10:53:11.016Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Select amount of CO2 to offset,2026-10-09T10:59:09.096Z,2026-10-09T10:59:09.096Z,Citizen,offset-service,6.5,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Reserve reforestation credits,2026-10-09T10:59:09.156Z,2026-10-09T10:59:21.576Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Reserve renewable energy credits,2026-10-09T10:59:09.156Z,2026-10-09T10:59:35.496Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Reserve waste recycling credits,2026-10-09T10:59:09.156Z,2026-10-09T10:59:49.896Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Process payment for offset units,2026-10-09T10:59:49.956Z,2026-10-09T10:59:53.916Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Retire credits under citizen name,2026-10-09T10:59:53.916Z,2026-10-09T11:01:28.956Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Mint and issue offset certificate,2026-10-09T11:01:28.956Z,2026-10-09T11:01:28.956Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+07aba1d8-c60d-45a6-b27f-cf7fd4916648,Update net emissions score and database,2026-10-09T11:01:29.076Z,2026-10-09T11:01:29.076Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+51042032-7d9c-40d1-984c-c120200dfcdd,Initiate assessment,2026-10-09T10:53:36.636Z,2026-10-09T10:53:36.636Z,Citizen,footprint-service,6.1,Record footprint baseline
+51042032-7d9c-40d1-984c-c120200dfcdd,Calculate footprint,2026-10-09T10:53:36.636Z,2026-10-09T10:53:36.636Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+51042032-7d9c-40d1-984c-c120200dfcdd,Present footprint report and peer comparison,2026-10-09T10:53:36.696Z,2026-10-09T10:53:36.696Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+51042032-7d9c-40d1-984c-c120200dfcdd,Record footprint baseline,2026-10-09T10:59:32.316Z,2026-10-09T10:59:32.316Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Initiate assessment,2026-10-09T10:54:52.056Z,2026-10-09T10:54:52.056Z,Citizen,footprint-service,6.1,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Calculate footprint,2026-10-09T10:54:52.056Z,2026-10-09T10:54:52.056Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Present footprint report and peer comparison,2026-10-09T10:54:52.116Z,2026-10-09T10:54:52.116Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Select amount of CO2 to offset,2026-10-09T10:57:19.356Z,2026-10-09T10:57:19.356Z,Citizen,offset-service,6.5,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Reserve renewable energy credits,2026-10-09T10:57:20.196Z,2026-10-09T10:57:32.196Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Reserve reforestation credits,2026-10-09T10:57:20.196Z,2026-10-09T10:57:43.116Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Reserve waste recycling credits,2026-10-09T10:57:20.196Z,2026-10-09T10:57:51.816Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Process payment for offset units,2026-10-09T10:57:51.876Z,2026-10-09T10:57:56.436Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Retire credits under citizen name,2026-10-09T10:57:56.436Z,2026-10-09T10:58:56.736Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Mint and issue offset certificate,2026-10-09T10:58:56.736Z,2026-10-09T10:58:56.736Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+9371b2e8-5c28-4787-aa4e-de1e6aa5d2d1,Update net emissions score and database,2026-10-09T10:58:56.856Z,2026-10-09T10:58:56.856Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Initiate assessment,2026-10-09T10:54:53.076Z,2026-10-09T10:54:53.076Z,Citizen,footprint-service,6.1,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Calculate footprint,2026-10-09T10:54:53.076Z,2026-10-09T10:54:53.076Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Present footprint report and peer comparison,2026-10-09T10:54:53.076Z,2026-10-09T10:54:53.076Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Select amount of CO2 to offset,2026-10-09T11:00:32.976Z,2026-10-09T11:00:32.976Z,Citizen,offset-service,6.5,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Reserve reforestation credits,2026-10-09T11:00:33.096Z,2026-10-09T11:01:07.116Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Process payment for offset units,2026-10-09T11:01:07.116Z,2026-10-09T11:01:12.396Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Retire credits under citizen name,2026-10-09T11:01:12.396Z,2026-10-09T11:02:10.236Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Mint and issue offset certificate,2026-10-09T11:02:10.236Z,2026-10-09T11:02:10.236Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+abfac945-1c8d-4f28-a023-b6ba27d11c5b,Update net emissions score and database,2026-10-09T11:02:10.416Z,2026-10-09T11:02:10.416Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+9372e083-c062-4525-bd06-b2ca3cbe0939,Initiate assessment,2026-10-09T10:55:51.156Z,2026-10-09T10:55:51.156Z,Citizen,footprint-service,6.1,Record footprint baseline
+9372e083-c062-4525-bd06-b2ca3cbe0939,Calculate footprint,2026-10-09T10:55:51.156Z,2026-10-09T10:55:51.156Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+9372e083-c062-4525-bd06-b2ca3cbe0939,Present footprint report and peer comparison,2026-10-09T10:55:51.156Z,2026-10-09T10:55:51.156Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+9372e083-c062-4525-bd06-b2ca3cbe0939,Record footprint baseline,2026-10-09T11:00:58.176Z,2026-10-09T11:00:58.176Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+d5b5cf22-7b38-4e07-8b7f-b6f3f0bf8dde,Initiate assessment,2026-10-09T10:56:21.396Z,2026-10-09T10:56:21.396Z,Citizen,footprint-service,6.1,Record footprint baseline
+d5b5cf22-7b38-4e07-8b7f-b6f3f0bf8dde,Calculate footprint,2026-10-09T10:56:21.456Z,2026-10-09T10:56:21.456Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+d5b5cf22-7b38-4e07-8b7f-b6f3f0bf8dde,Present footprint report and peer comparison,2026-10-09T10:56:21.456Z,2026-10-09T10:56:21.456Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+d5b5cf22-7b38-4e07-8b7f-b6f3f0bf8dde,Record footprint baseline,2026-10-09T10:59:01.596Z,2026-10-09T10:59:01.596Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Initiate assessment,2026-10-09T10:56:44.856Z,2026-10-09T10:56:44.856Z,Citizen,footprint-service,6.1,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Calculate footprint,2026-10-09T10:56:44.916Z,2026-10-09T10:56:44.916Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Present footprint report and peer comparison,2026-10-09T10:56:44.976Z,2026-10-09T10:56:44.976Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Select amount of CO2 to offset,2026-10-09T11:01:13.956Z,2026-10-09T11:01:13.956Z,Citizen,offset-service,6.5,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Reserve renewable energy credits,2026-10-09T11:01:14.016Z,2026-10-09T11:01:45.696Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Process payment for offset units,2026-10-09T11:01:45.696Z,2026-10-09T11:01:55.116Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Notify citizen of payment failure,2026-10-09T11:01:55.116Z,2026-10-09T11:01:55.116Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Process payment for offset units,2026-10-09T11:02:55.176Z,2026-10-09T11:03:05.196Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Notify citizen of payment failure,2026-10-09T11:03:05.256Z,2026-10-09T11:03:05.256Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Process payment for offset units,2026-10-09T11:05:05.256Z,2026-10-09T11:05:14.916Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Retire credits under citizen name,2026-10-09T11:05:14.916Z,2026-10-09T11:06:42.576Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Mint and issue offset certificate,2026-10-09T11:06:42.636Z,2026-10-09T11:06:42.636Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+4ddab59a-2e4b-4148-8db3-478a33d1323e,Update net emissions score and database,2026-10-09T11:06:42.816Z,2026-10-09T11:06:42.816Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+639bfd32-b0ec-45bc-8fd7-b4699fbd45c2,Initiate assessment,2026-10-09T10:57:45.936Z,2026-10-09T10:57:45.936Z,Citizen,footprint-service,6.1,Record footprint baseline
+639bfd32-b0ec-45bc-8fd7-b4699fbd45c2,Calculate footprint,2026-10-09T10:57:45.936Z,2026-10-09T10:57:45.936Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+639bfd32-b0ec-45bc-8fd7-b4699fbd45c2,Present footprint report and peer comparison,2026-10-09T10:57:45.936Z,2026-10-09T10:57:45.936Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+639bfd32-b0ec-45bc-8fd7-b4699fbd45c2,Record footprint baseline,2026-10-09T11:00:11.376Z,2026-10-09T11:00:11.376Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+bc692184-f123-476d-8694-39a29d70725d,Initiate assessment,2026-10-09T10:58:17.496Z,2026-10-09T10:58:17.496Z,Citizen,footprint-service,6.1,Record footprint baseline
+bc692184-f123-476d-8694-39a29d70725d,Calculate footprint,2026-10-09T10:58:17.496Z,2026-10-09T10:58:17.496Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+bc692184-f123-476d-8694-39a29d70725d,Present footprint report and peer comparison,2026-10-09T10:58:17.496Z,2026-10-09T10:58:17.496Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+bc692184-f123-476d-8694-39a29d70725d,Record footprint baseline,2026-10-09T11:04:11.376Z,2026-10-09T11:04:11.376Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Initiate assessment,2026-10-09T10:58:38.796Z,2026-10-09T10:58:38.796Z,Citizen,footprint-service,6.1,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Calculate footprint,2026-10-09T10:58:38.796Z,2026-10-09T10:58:38.796Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Present footprint report and peer comparison,2026-10-09T10:58:38.796Z,2026-10-09T10:58:38.796Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Select amount of CO2 to offset,2026-10-09T11:02:14.076Z,2026-10-09T11:02:14.076Z,Citizen,offset-service,6.5,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Reserve waste recycling credits,2026-10-09T11:02:14.256Z,2026-10-09T11:02:37.536Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Process payment for offset units,2026-10-09T11:02:37.536Z,2026-10-09T11:02:47.676Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Notify citizen of payment failure,2026-10-09T11:02:47.676Z,2026-10-09T11:02:47.676Z,Offset Marketplace,offset-service,6.9 (No),Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Process payment for offset units,2026-10-09T11:03:47.676Z,2026-10-09T11:03:53.616Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Retire credits under citizen name,2026-10-09T11:03:53.676Z,2026-10-09T11:05:00.636Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Mint and issue offset certificate,2026-10-09T11:05:00.696Z,2026-10-09T11:05:00.696Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+9f5bdd62-0e0c-40fa-b5a8-80cd17884355,Update net emissions score and database,2026-10-09T11:05:00.816Z,2026-10-09T11:05:00.816Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+db589599-1526-4220-bfaa-a319508b496d,Initiate assessment,2026-10-09T10:58:46.176Z,2026-10-09T10:58:46.176Z,Citizen,footprint-service,6.1,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Calculate footprint,2026-10-09T10:58:46.176Z,2026-10-09T10:58:46.176Z,Assessment Service,footprint-service,6.2,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Present footprint report and peer comparison,2026-10-09T10:58:46.176Z,2026-10-09T10:58:46.176Z,Assessment Service,footprint-service,6.3,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Select amount of CO2 to offset,2026-10-09T11:03:43.356Z,2026-10-09T11:03:43.356Z,Citizen,offset-service,6.5,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Reserve reforestation credits,2026-10-09T11:03:43.536Z,2026-10-09T11:04:01.296Z,Offset Marketplace,offset-service,6.7,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Process payment for offset units,2026-10-09T11:04:01.296Z,2026-10-09T11:04:06.216Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Notify citizen of payment failure,2026-10-09T11:04:06.276Z,2026-10-09T11:04:06.276Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Process payment for offset units,2026-10-09T11:05:06.276Z,2026-10-09T11:05:15.216Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Notify citizen of payment failure,2026-10-09T11:05:15.216Z,2026-10-09T11:05:15.216Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Process payment for offset units,2026-10-09T11:07:15.216Z,2026-10-09T11:07:22.896Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Notify citizen of payment failure,2026-10-09T11:07:22.956Z,2026-10-09T11:07:22.956Z,Offset Marketplace,offset-service,6.9 (No),Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Process payment for offset units,2026-10-09T11:10:22.956Z,2026-10-09T11:10:31.236Z,Offset Marketplace,offset-service,6.8/6.8a,Offset purchase cancelled (payment failed)
+db589599-1526-4220-bfaa-a319508b496d,Offset purchase cancelled (payment failed),2026-10-09T11:10:31.296Z,2026-10-09T11:10:31.296Z,Offset Marketplace,offset-service,,Offset purchase cancelled (payment failed)
+37a46f7c-414e-4d1a-9bcd-38349f0f35da,Initiate assessment,2026-10-09T10:58:50.616Z,2026-10-09T10:58:50.616Z,Citizen,footprint-service,6.1,Record footprint baseline
+37a46f7c-414e-4d1a-9bcd-38349f0f35da,Calculate footprint,2026-10-09T10:58:50.616Z,2026-10-09T10:58:50.616Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+37a46f7c-414e-4d1a-9bcd-38349f0f35da,Present footprint report and peer comparison,2026-10-09T10:58:50.616Z,2026-10-09T10:58:50.616Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+37a46f7c-414e-4d1a-9bcd-38349f0f35da,Record footprint baseline,2026-10-09T11:00:01.176Z,2026-10-09T11:00:01.176Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+9b6b5da3-5a21-494d-83bb-fda219b31a09,Initiate assessment,2026-10-09T10:58:50.976Z,2026-10-09T10:58:50.976Z,Citizen,footprint-service,6.1,Record footprint baseline
+9b6b5da3-5a21-494d-83bb-fda219b31a09,Calculate footprint,2026-10-09T10:58:50.976Z,2026-10-09T10:58:50.976Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+9b6b5da3-5a21-494d-83bb-fda219b31a09,Present footprint report and peer comparison,2026-10-09T10:58:50.976Z,2026-10-09T10:58:50.976Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+9b6b5da3-5a21-494d-83bb-fda219b31a09,Record footprint baseline,2026-10-09T11:04:16.296Z,2026-10-09T11:04:16.296Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+5c36652b-5eee-4c5f-aa7a-aee14587e164,Initiate assessment,2026-10-09T10:59:27.516Z,2026-10-09T10:59:27.516Z,Citizen,footprint-service,6.1,Record footprint baseline
+5c36652b-5eee-4c5f-aa7a-aee14587e164,Calculate footprint,2026-10-09T10:59:27.576Z,2026-10-09T10:59:27.576Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+5c36652b-5eee-4c5f-aa7a-aee14587e164,Present footprint report and peer comparison,2026-10-09T10:59:27.576Z,2026-10-09T10:59:27.576Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+5c36652b-5eee-4c5f-aa7a-aee14587e164,Record footprint baseline,2026-10-09T11:02:09.336Z,2026-10-09T11:02:09.336Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+809884ce-6b78-440b-989a-85fc57470dfc,Initiate assessment,2026-10-09T10:59:54.636Z,2026-10-09T10:59:54.636Z,Citizen,footprint-service,6.1,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Calculate footprint,2026-10-09T10:59:54.636Z,2026-10-09T10:59:54.636Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Present footprint report and peer comparison,2026-10-09T10:59:54.636Z,2026-10-09T10:59:54.636Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Select amount of CO2 to offset,2026-10-09T11:05:02.076Z,2026-10-09T11:05:02.076Z,Citizen,offset-service,6.5,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Reserve reforestation credits,2026-10-09T11:05:02.196Z,2026-10-09T11:05:40.476Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Process payment for offset units,2026-10-09T11:05:40.536Z,2026-10-09T11:05:46.956Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Retire credits under citizen name,2026-10-09T11:05:46.956Z,2026-10-09T11:07:18.696Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Mint and issue offset certificate,2026-10-09T11:07:18.696Z,2026-10-09T11:07:18.696Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+809884ce-6b78-440b-989a-85fc57470dfc,Update net emissions score and database,2026-10-09T11:07:18.816Z,2026-10-09T11:07:18.816Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Initiate assessment,2026-10-09T11:00:09.816Z,2026-10-09T11:00:09.816Z,Citizen,footprint-service,6.1,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Calculate footprint,2026-10-09T11:00:09.816Z,2026-10-09T11:00:09.816Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Present footprint report and peer comparison,2026-10-09T11:00:09.816Z,2026-10-09T11:00:09.816Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Select amount of CO2 to offset,2026-10-09T11:05:21.096Z,2026-10-09T11:05:21.096Z,Citizen,offset-service,6.5,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Reserve reforestation credits,2026-10-09T11:05:21.216Z,2026-10-09T11:05:47.976Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Process payment for offset units,2026-10-09T11:05:48.036Z,2026-10-09T11:05:54.756Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Retire credits under citizen name,2026-10-09T11:05:54.756Z,2026-10-09T11:07:22.116Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Mint and issue offset certificate,2026-10-09T11:07:22.116Z,2026-10-09T11:07:22.116Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+0ca99e4d-4be9-4029-92d4-2fa1b18b0789,Update net emissions score and database,2026-10-09T11:07:22.236Z,2026-10-09T11:07:22.236Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Initiate assessment,2026-10-09T11:01:16.536Z,2026-10-09T11:01:16.536Z,Citizen,footprint-service,6.1,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Calculate footprint,2026-10-09T11:01:16.536Z,2026-10-09T11:01:16.536Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Present footprint report and peer comparison,2026-10-09T11:01:16.596Z,2026-10-09T11:01:16.596Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Select amount of CO2 to offset,2026-10-09T11:05:25.116Z,2026-10-09T11:05:25.116Z,Citizen,offset-service,6.5,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Reserve reforestation credits,2026-10-09T11:05:25.236Z,2026-10-09T11:05:43.416Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Process payment for offset units,2026-10-09T11:05:43.476Z,2026-10-09T11:05:49.836Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Retire credits under citizen name,2026-10-09T11:05:49.836Z,2026-10-09T11:06:40.596Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Mint and issue offset certificate,2026-10-09T11:06:40.596Z,2026-10-09T11:06:40.596Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+5d6f8a53-b885-49af-911c-672045c33642,Update net emissions score and database,2026-10-09T11:06:40.836Z,2026-10-09T11:06:40.836Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Initiate assessment,2026-10-09T11:01:58.716Z,2026-10-09T11:01:58.716Z,Citizen,footprint-service,6.1,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Calculate footprint,2026-10-09T11:01:58.716Z,2026-10-09T11:01:58.716Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Present footprint report and peer comparison,2026-10-09T11:01:58.716Z,2026-10-09T11:01:58.716Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Select amount of CO2 to offset,2026-10-09T11:08:59.016Z,2026-10-09T11:08:59.016Z,Citizen,offset-service,6.5,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Reserve waste recycling credits,2026-10-09T11:08:59.196Z,2026-10-09T11:09:14.736Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Reserve reforestation credits,2026-10-09T11:08:59.196Z,2026-10-09T11:09:15.816Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Process payment for offset units,2026-10-09T11:09:15.816Z,2026-10-09T11:09:26.256Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Retire credits under citizen name,2026-10-09T11:09:26.316Z,2026-10-09T11:10:44.556Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Mint and issue offset certificate,2026-10-09T11:10:44.556Z,2026-10-09T11:10:44.556Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+ad9b94e4-8da5-4802-a1ff-8a5eb52462d6,Update net emissions score and database,2026-10-09T11:10:44.736Z,2026-10-09T11:10:44.736Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Initiate assessment,2026-10-09T11:03:33.036Z,2026-10-09T11:03:33.036Z,Citizen,footprint-service,6.1,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Calculate footprint,2026-10-09T11:03:33.036Z,2026-10-09T11:03:33.036Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Present footprint report and peer comparison,2026-10-09T11:03:33.036Z,2026-10-09T11:03:33.036Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Select amount of CO2 to offset,2026-10-09T11:12:19.056Z,2026-10-09T11:12:19.056Z,Citizen,offset-service,6.5,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Reserve renewable energy credits,2026-10-09T11:12:19.236Z,2026-10-09T11:12:40.116Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Reserve reforestation credits,2026-10-09T11:12:19.236Z,2026-10-09T11:12:50.676Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Process payment for offset units,2026-10-09T11:12:50.676Z,2026-10-09T11:13:00.756Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Retire credits under citizen name,2026-10-09T11:13:00.756Z,2026-10-09T11:14:09.756Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Mint and issue offset certificate,2026-10-09T11:14:09.816Z,2026-10-09T11:14:09.816Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+f3266a28-fc41-4bef-a841-e82f150553f5,Update net emissions score and database,2026-10-09T11:14:09.876Z,2026-10-09T11:14:09.876Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+bc2ccdb6-0f0b-40ab-936a-3bb96822625a,Initiate assessment,2026-10-09T11:04:33.516Z,2026-10-09T11:04:33.516Z,Citizen,footprint-service,6.1,Record footprint baseline
+bc2ccdb6-0f0b-40ab-936a-3bb96822625a,Calculate footprint,2026-10-09T11:04:33.516Z,2026-10-09T11:04:33.516Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+bc2ccdb6-0f0b-40ab-936a-3bb96822625a,Present footprint report and peer comparison,2026-10-09T11:04:33.576Z,2026-10-09T11:04:33.576Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+bc2ccdb6-0f0b-40ab-936a-3bb96822625a,Record footprint baseline,2026-10-09T11:10:17.496Z,2026-10-09T11:10:17.496Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+9be53bf5-501f-4857-a221-ab34fa1951b1,Initiate assessment,2026-10-09T11:04:41.796Z,2026-10-09T11:04:41.796Z,Citizen,footprint-service,6.1,Record footprint baseline
+9be53bf5-501f-4857-a221-ab34fa1951b1,Calculate footprint,2026-10-09T11:04:41.856Z,2026-10-09T11:04:41.856Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+9be53bf5-501f-4857-a221-ab34fa1951b1,Present footprint report and peer comparison,2026-10-09T11:04:41.856Z,2026-10-09T11:04:41.856Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+9be53bf5-501f-4857-a221-ab34fa1951b1,Record footprint baseline,2026-10-09T11:08:12.336Z,2026-10-09T11:08:12.336Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+2825bc8f-4d86-498f-bf1b-2b77208d2f9c,Initiate assessment,2026-10-09T11:05:00.636Z,2026-10-09T11:05:00.636Z,Citizen,footprint-service,6.1,Record footprint baseline
+2825bc8f-4d86-498f-bf1b-2b77208d2f9c,Calculate footprint,2026-10-09T11:05:00.636Z,2026-10-09T11:05:00.636Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+2825bc8f-4d86-498f-bf1b-2b77208d2f9c,Present footprint report and peer comparison,2026-10-09T11:05:00.696Z,2026-10-09T11:05:00.696Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+2825bc8f-4d86-498f-bf1b-2b77208d2f9c,Record footprint baseline,2026-10-09T11:06:04.836Z,2026-10-09T11:06:04.836Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Initiate assessment,2026-10-09T11:05:15.156Z,2026-10-09T11:05:15.156Z,Citizen,footprint-service,6.1,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Calculate footprint,2026-10-09T11:05:15.156Z,2026-10-09T11:05:15.156Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Present footprint report and peer comparison,2026-10-09T11:05:15.156Z,2026-10-09T11:05:15.156Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Select amount of CO2 to offset,2026-10-09T11:12:20.556Z,2026-10-09T11:12:20.556Z,Citizen,offset-service,6.5,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Reserve reforestation credits,2026-10-09T11:12:21.696Z,2026-10-09T11:12:52.356Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Reserve renewable energy credits,2026-10-09T11:12:21.696Z,2026-10-09T11:12:54.456Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Process payment for offset units,2026-10-09T11:12:54.456Z,2026-10-09T11:12:58.716Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Retire credits under citizen name,2026-10-09T11:12:58.716Z,2026-10-09T11:14:33.396Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Mint and issue offset certificate,2026-10-09T11:14:33.396Z,2026-10-09T11:14:33.396Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+f3fce737-cd7e-4b10-830b-2fb5eb4c2735,Update net emissions score and database,2026-10-09T11:14:33.456Z,2026-10-09T11:14:33.456Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Initiate assessment,2026-10-09T11:05:22.536Z,2026-10-09T11:05:22.536Z,Citizen,footprint-service,6.1,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Calculate footprint,2026-10-09T11:05:22.596Z,2026-10-09T11:05:22.596Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Present footprint report and peer comparison,2026-10-09T11:05:22.596Z,2026-10-09T11:05:22.596Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Select amount of CO2 to offset,2026-10-09T11:15:08.256Z,2026-10-09T11:15:08.256Z,Citizen,offset-service,6.5,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Reserve reforestation credits,2026-10-09T11:15:08.316Z,2026-10-09T11:15:45.936Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Reserve renewable energy credits,2026-10-09T11:15:08.376Z,2026-10-09T11:15:22.776Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Process payment for offset units,2026-10-09T11:15:45.936Z,2026-10-09T11:15:54.516Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Retire credits under citizen name,2026-10-09T11:15:54.516Z,2026-10-09T11:17:16.716Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Mint and issue offset certificate,2026-10-09T11:17:16.716Z,2026-10-09T11:17:16.716Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+3d0e5e94-ac77-4178-9446-4ad21be05877,Update net emissions score and database,2026-10-09T11:17:16.836Z,2026-10-09T11:17:16.836Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Initiate assessment,2026-10-09T11:05:27.816Z,2026-10-09T11:05:27.816Z,Citizen,footprint-service,6.1,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Calculate footprint,2026-10-09T11:05:27.816Z,2026-10-09T11:05:27.816Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Present footprint report and peer comparison,2026-10-09T11:05:27.876Z,2026-10-09T11:05:27.876Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Select amount of CO2 to offset,2026-10-09T11:09:53.076Z,2026-10-09T11:09:53.076Z,Citizen,offset-service,6.5,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Reserve reforestation credits,2026-10-09T11:09:53.256Z,2026-10-09T11:10:18.756Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Reserve renewable energy credits,2026-10-09T11:09:53.256Z,2026-10-09T11:10:32.136Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Process payment for offset units,2026-10-09T11:10:32.136Z,2026-10-09T11:10:40.776Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Retire credits under citizen name,2026-10-09T11:10:40.776Z,2026-10-09T11:11:36.996Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Mint and issue offset certificate,2026-10-09T11:11:37.056Z,2026-10-09T11:11:37.056Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+11b93d28-1cf6-4764-9388-a12f7f7aacf7,Update net emissions score and database,2026-10-09T11:11:37.176Z,2026-10-09T11:11:37.176Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Initiate assessment,2026-10-09T11:05:41.796Z,2026-10-09T11:05:41.796Z,Citizen,footprint-service,6.1,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Calculate footprint,2026-10-09T11:05:41.796Z,2026-10-09T11:05:41.796Z,Assessment Service,footprint-service,6.2,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Present footprint report and peer comparison,2026-10-09T11:05:41.796Z,2026-10-09T11:05:41.796Z,Assessment Service,footprint-service,6.3,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Select amount of CO2 to offset,2026-10-09T11:12:00.516Z,2026-10-09T11:12:00.516Z,Citizen,offset-service,6.5,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Reserve reforestation credits,2026-10-09T11:12:00.636Z,2026-10-09T11:12:23.676Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Reserve renewable energy credits,2026-10-09T11:12:00.636Z,2026-10-09T11:12:25.476Z,Offset Marketplace,offset-service,6.7,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Process payment for offset units,2026-10-09T11:12:25.476Z,2026-10-09T11:12:34.956Z,Offset Marketplace,offset-service,6.8/6.8a,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Retire credits under citizen name,2026-10-09T11:12:35.016Z,2026-10-09T11:13:39.696Z,Verified Carbon Registry,offset-service,6.11,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Mint and issue offset certificate,2026-10-09T11:13:39.756Z,2026-10-09T11:13:39.756Z,Offset Marketplace,offset-service,6.12,Update net emissions score and database
+ad2ef18e-af08-497a-b03c-164df0a25b9c,Update net emissions score and database,2026-10-09T11:13:40.056Z,2026-10-09T11:13:40.056Z,Assessment Service,footprint-service,6.13,Update net emissions score and database
+7993527f-179c-4d12-97d0-f075682346ae,Initiate assessment,2026-10-09T11:06:40.956Z,2026-10-09T11:06:40.956Z,Citizen,footprint-service,6.1,Record footprint baseline
+7993527f-179c-4d12-97d0-f075682346ae,Calculate footprint,2026-10-09T11:06:40.956Z,2026-10-09T11:06:40.956Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+7993527f-179c-4d12-97d0-f075682346ae,Present footprint report and peer comparison,2026-10-09T11:06:41.016Z,2026-10-09T11:06:41.016Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+7993527f-179c-4d12-97d0-f075682346ae,Record footprint baseline,2026-10-09T11:11:50.676Z,2026-10-09T11:11:50.676Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline
+03a98e2e-0b0c-4eb4-a50e-9e4ac8bad1db,Initiate assessment,2026-10-09T11:07:08.556Z,2026-10-09T11:07:08.556Z,Citizen,footprint-service,6.1,Record footprint baseline
+03a98e2e-0b0c-4eb4-a50e-9e4ac8bad1db,Calculate footprint,2026-10-09T11:07:08.616Z,2026-10-09T11:07:08.616Z,Assessment Service,footprint-service,6.2,Record footprint baseline
+03a98e2e-0b0c-4eb4-a50e-9e4ac8bad1db,Present footprint report and peer comparison,2026-10-09T11:07:08.616Z,2026-10-09T11:07:08.616Z,Assessment Service,footprint-service,6.3,Record footprint baseline
+03a98e2e-0b0c-4eb4-a50e-9e4ac8bad1db,Record footprint baseline,2026-10-09T11:13:06.936Z,2026-10-09T11:13:06.936Z,Assessment Service,footprint-service,6.4 (No),Record footprint baseline

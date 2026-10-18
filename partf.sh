@@ -13,11 +13,11 @@ cd "$(dirname "$0")"
 
 export CASES="${CASES:-120}" SEED="${SEED:-2026}"
 export HOST_UID="$(id -u)" HOST_GID="$(id -g)"
-BASE="${BASE:-http://localhost:3000}"
+OPS="${OPS:-http://localhost:4000}"   # operator console: reports every service's health
 
 echo "== 1/5  Starting the stack"
 docker compose up --build -d
-healthy() { local h; h="$(curl -sf "$BASE/api/health")" || return 1; [[ -n "$h" && "$h" != *'"down"'* ]]; }
+healthy() { local h; h="$(curl -sf "$OPS/api/health")" || return 1; [[ -n "$h" && "$h" != *'"down"'* ]]; }
 for _ in $(seq 1 60); do healthy && break; sleep 2; done
 healthy || { echo "Services did not become healthy"; docker compose ps; exit 1; }
 

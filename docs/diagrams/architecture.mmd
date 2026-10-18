@@ -1,9 +1,9 @@
 %%{init: {'theme':'neutral', 'themeVariables': {'fontSize': '16px'}}}%%
 graph TB
-    Citizen(["Citizen / Client App<br/>(browser demo console)"])
+    Citizen(["NetZero Hub citizen app<br/>(web + mobile)"])
 
     subgraph GW["API Gateway :3000"]
-        Gateway["Reverse proxy +<br/>GET /citizen/:id/dashboard (aggregator)<br/>+ demo console & live event feed"]
+        Gateway["Reverse proxy +<br/>GET /citizen/:id/dashboard (aggregator)<br/>+ serves the citizen app"]
     end
 
     Citizen -->|HTTPS| Gateway
@@ -42,7 +42,12 @@ graph TB
     OffDB[("SQLite<br/>offsets.db")]
 
     Logs[("logs/*.jsonl — process-event logs<br/>appended by all five services (Part F)")]
-    Logs -.->|"read-only live feed"| Gateway
+    subgraph OPS["Operator side, localhost:4000 only"]
+        Ops["ops-console<br/>health · queues · live process map<br/>stop / start each service"]
+        Docker[["Docker Engine"]]
+    end
+    Logs -.->|"read-only live feed"| Ops
+    Ops -->|"stop / start containers"| Docker
 
     Reservation --- ResDB
     Billing --- BillDB
@@ -53,5 +58,7 @@ graph TB
     classDef db fill:#eef1fb,stroke:#33418f,color:#1c2452;
     classDef broker fill:#fdefe0,stroke:#b5651d,color:#5c3311;
     class Reservation,Billing,Footprint,Offset,Journey,Gateway svc;
+    classDef ops fill:#f3eefb,stroke:#5b3f8f,color:#2b1c47;
+    class Ops,Docker ops;
     class ResDB,BillDB,FootDB,OffDB,Logs db;
     class Broker broker;

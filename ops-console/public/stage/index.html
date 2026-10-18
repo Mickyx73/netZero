@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetZero Hub Stage</title>
+<meta name="description" content="Presenter view: the NetZero Hub citizen app beside the live operator view of the microservices behind it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23165d47'/%3E%3Cpath d='M9 22c0-8 5-13 14-13-1 9-6 13-13 13M9 22l6-6' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  @font-face { font-family: "Bricolage Grotesque"; font-weight: 500 800; src: url("../fonts/BricolageGrotesque-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Public Sans"; font-weight: 400 700; src: url("../fonts/PublicSans-normal.woff2") format("woff2"); }
+  :root { --bg: #0d1813; --ink: #e9f1ec; --ink-2: #a9bbb1; --brand: #3fb489; --frame: #050806; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: radial-gradient(circle at 20% 10%, #1d3f33, var(--bg) 60%); color: var(--ink); font: 15px/1.5 "Public Sans", system-ui, sans-serif; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 24px; flex-wrap: wrap; }
+  header h1 { font: 800 1.25rem "Bricolage Grotesque", system-ui, sans-serif; margin: 0; }
+  header p { margin: 0; color: var(--ink-2); flex: 1; min-width: 240px; }
+  header a { color: var(--brand); font-weight: 600; }
+  .stage { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 24px; padding: 0 24px 20px; min-height: 0; }
+  .phone { width: 404px; height: 100%; max-height: 880px; align-self: center; border: 12px solid var(--frame); border-radius: 48px; overflow: hidden; background: #edf1ee; box-shadow: 0 30px 80px rgba(0, 0, 0, .55); position: relative; padding-top: 34px; }
+  .phone::before { content: ""; position: absolute; top: 8px; left: 50%; width: 110px; height: 26px; margin-left: -55px; background: var(--frame); border-radius: 14px; z-index: 2; }
+  .phone iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .ops { border-radius: 18px; overflow: hidden; background: #fcfcfb; min-height: 0; box-shadow: 0 30px 80px rgba(0, 0, 0, .4); }
+  .ops iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .label { font: 700 .85rem "Public Sans", sans-serif; color: var(--ink-2); margin: 0 0 6px; }
+  @media (max-width: 900px) { .stage { grid-template-columns: minmax(0, 1fr); } .phone { width: min(404px, 100%); height: 760px; justify-self: center; } .ops { height: 80vh; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>NetZero Hub, live</h1>
+  <p>Left: the citizen app. Right: the microservices behind it, live, with a stop/start switch for each.</p>
+  <a id="appLink" href="http://localhost:3000/" target="_blank" rel="noopener">Open the app on its own</a>
+  <a href="/?present=1&amp;theme=light" target="_blank" rel="noopener">Full operator console</a>
+</header>
+<main class="stage">
+  <div class="phone"><iframe id="app" title="NetZero Hub app"></iframe></div>
+  <div class="ops"><iframe src="/?embed=1&amp;theme=light" title="Live operator view"></iframe></div>
+</main>
+<script>
+  // The citizen app is served by the API gateway on port 3000, on the same host as this console.
+  const app = `${location.protocol}//${location.hostname}:3000/`;
+  document.getElementById("app").src = app + "#/home";
+  document.getElementById("appLink").href = app;
+</script>
+</body>
+</html>

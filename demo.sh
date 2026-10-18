@@ -28,7 +28,7 @@ step() {
 }
 post() { curl -s -X POST "$BASE$1" -H "Content-Type: application/json" -d "$2"; }
 
-curl -sf "$BASE/api/health" >/dev/null || { echo "Gateway not reachable at $BASE — run: docker compose up --build -d"; exit 1; }
+curl -sf "$BASE/health" >/dev/null || { echo "Gateway not reachable at $BASE — run: docker compose up --build -d"; exit 1; }
 
 step "1. Carbon-Optimized Journey Planner (synchronous, scatter-gather + inclusive gateway)"
 post /api/journeys/plan '{"origin":"Wollongong","destination":"Sydney CBD","maxDurationMins":60}' | pretty

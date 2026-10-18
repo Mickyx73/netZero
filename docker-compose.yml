@@ -3,7 +3,9 @@
 #   - a message broker (RabbitMQ) for the two asynchronous choreographies
 #   - five independently deployable microservices, each with its own SQLite
 #     volume (database-per-service — no service reads another's data store)
-#   - one API gateway as the platform's single external entry point
+#   - one API gateway as the platform's single external entry point, serving
+#     the NetZero Hub citizen app on :3000
+#   - an operator console on :4000 (localhost only) to watch and control the services
 # Every one of the five process services also writes detailed, process-mining-
 # ready event logs into the shared ./logs folder (see each service's
 # src/processLog.ts). Part F tooling (profile "tools", never started by `up`):
@@ -11,14 +13,14 @@
 #   docker compose run --rm log-exporter    # logs -> Disco/Apromore CSV + XES
 #   docker compose run --rm process-miner   # pm4py discovery/conformance/performance
 # or simply ./partf.sh to run all three in order.
-# Browser demo console: http://localhost:3000 once the stack is up.
+# Citizen app: http://localhost:3000   Operator console: http://localhost:4000
 
 services:
   rabbitmq:
     image: rabbitmq:3-management
     environment:
       # Refresh queue/consumer statistics every second (default 5 s), so the
-      # demo console shows a message waiting the moment its consumer stops.
+      # operator console shows a message waiting the moment its consumer stops.
       RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbit collect_statistics_interval 1000"
     ports:
       - "5672:5672"   # AMQP
@@ -109,16 +111,37 @@ services:
       FOOTPRINT_URL: http://footprint-service:3003
       OFFSET_URL: http://offset-service:3004
       JOURNEY_URL: http://journey-planner-service:3005
-      RABBITMQ_MGMT_URL: http://rabbitmq:15672
-      LOG_DIR: /app/logs
-    volumes:
-      - ./logs:/app/logs:ro   # read-only: feeds the demo console's live process-event panel
     depends_on:
       - ev-reservation-service
       - ev-billing-service
       - footprint-service
       - offset-service
       - journey-planner-service
+
+  # Operator console (not for citizens): live architecture, RabbitMQ queues,
+  # process map, event feed, and stop/start buttons for each microservice.
+  # The Docker socket gives this container control of the host's Docker, so
+  # the port is published on 127.0.0.1 only and the console can only stop or
+  # start this project's own services (see ops-console/src/index.ts).
+  ops-console:
+    build: ./ops-console
+    ports: ["127.0.0.1:4000:4000"]
+    environment:
+      PORT: 4000
+      SERVICE_NAME: ops-console
+      GATEWAY_URL: http://api-gateway:3000
+      RESERVATION_URL: http://ev-reservation-service:3001
+      BILLING_URL: http://ev-billing-service:3002
+      FOOTPRINT_URL: http://footprint-service:3003
+      OFFSET_URL: http://offset-service:3004
+      JOURNEY_URL: http://journey-planner-service:3005
+      RABBITMQ_MGMT_URL: http://rabbitmq:15672
+      LOG_DIR: /app/logs
+    volumes:
+      - ./logs:/app/logs:ro   # read-only: feeds the live process map and event feed
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - api-gateway
 
   # Process-mining export tool. Not started by `docker compose up` (it has no
   # long-running server to run); invoke it on demand once some demo traffic

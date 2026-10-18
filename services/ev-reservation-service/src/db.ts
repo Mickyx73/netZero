@@ -27,7 +27,7 @@ db.exec(`
     slot_end TEXT NOT NULL,
     -- confirmed -> charging -> session_ended            (happy path)
     -- confirmed -> preauth_declined -> charging          (BPMN 4.7a retry loop)
-    -- preauth_declined -> abandoned / confirmed -> expired (observed deviations)
+    -- preauth_declined -> abandoned / confirmed -> expired / confirmed -> cancelled (observed deviations)
     status TEXT NOT NULL DEFAULT 'confirmed',
     confirmation_code TEXT NOT NULL,
     preauth_attempts INTEGER NOT NULL DEFAULT 0,

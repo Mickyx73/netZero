@@ -32,11 +32,13 @@ Three architectural decisions were made once and applied consistently across all
 
 ![Figure E.1](diagrams/architecture.png)
 
-*Figure E.1 — Deployment/component architecture: API Gateway, five microservices, RabbitMQ, one SQLite database per data-owning service, and the shared process-event log.*
+*Figure E.1 — Deployment/component architecture: API Gateway, five microservices, RabbitMQ, one SQLite database per data-owning service, the shared process-event log, and the operator console.*
 
-The system is deployed as six application containers plus a broker:
+The system is deployed as six application containers plus a broker, with an operator console beside them:
 
-- **`api-gateway`** is the platform's single external entry point, corresponding directly to the Aggregator port on the Hub side of Part C's Figure C.2 ParticipantArchitecture. It reverse-proxies `/api/<resource>` to the owning service, and exposes one genuine aggregation endpoint, `GET /api/citizen/:userId/dashboard`. That endpoint fans out to `footprint-service`, `offset-service` and `ev-reservation-service` in parallel and, for every ended charging session, cross-references `ev-billing-service`, composing a single citizen view from four services. It also serves the browser demo console and a read-only feed of the process-event log (see `docs/DEMO.md`).
+- **`api-gateway`** is the platform's single external entry point, corresponding directly to the Aggregator port on the Hub side of Part C's Figure C.2 ParticipantArchitecture. It reverse-proxies `/api/<resource>` to the owning service, and exposes one genuine aggregation endpoint, `GET /api/citizen/:userId/dashboard`. That endpoint fans out to `footprint-service`, `offset-service` and `ev-reservation-service` in parallel and, for every ended charging session, cross-references `ev-billing-service`, composing a single citizen view from four services. It also serves the NetZero Hub citizen app, and nothing else: operator tooling is kept off the citizen port.
+
+- **`ops-console`** (port 4000, published on localhost only) is the operator side of the platform. It reports every service's health, RabbitMQ queue depth and consumer count, and a read-only tail of the process-event logs, and it can **stop and start each microservice and the broker** through the Docker Engine API. Because the Docker socket is root-equivalent on the host, the control endpoints are restricted to this compose project's own services (the gateway excluded), to the two actions stop and start, and to requests carrying an `X-Ops-Console` header, which a browser will not send cross-site without a CORS preflight the console never approves.
 - **RabbitMQ** provides one durable topic exchange, `netzero.events`. `ev-reservation-service` publishes `ev.session.ended`, which `ev-billing-service` consumes; billing then publishes `ev.billing.settled`. `offset-service` publishes and consumes its own `offset.requested` event to hand work to its background worker, then publishes `offset.certified` or `offset.failed`. A real broker (rather than delayed HTTP callbacks) was chosen so the asynchronous nature of these two contracts is genuine: the publisher returns immediately, messages survive a consumer restart (durable queue, persistent messages), and a consumer that is down catches up when it returns.
 - Each service is independently built, deployed and scaled (`docker-compose.yml`), and each stateful service owns an isolated volume.
 
@@ -53,6 +55,9 @@ Realises Part A Service 3.2, Part C Service Contract 3, and the "RSVP management
 | `/reservations/:id/complete` | POST | Driver unplugs; publishes `ev.session.ended` (only from `charging`, so a repeat call gets `409`) | 4.8 complete |
 | `/reservations/:id/no-show` | POST | Arrival window lapsed (fired by a scheduler in production) | — (not in Part B) |
 | `/reservations/:id/abandon` | POST | Driver gives up after declined pre-authorisations | — (not in Part B) |
+| `/reservations/:id/cancel` | POST | Driver cancels a confirmed booking (frees the bay) | — (not in Part B) |
+| `/stations` | GET | Station catalogue with live status (available, reserved now, in use), Part A Service 3.1 | |
+| `/stations/:id/availability?from=&to=` | GET | Booked intervals at one station, so a client can grey out taken slots (no user data exposed) | |
 | `/reservations/:id` | GET | Retrieve one reservation | |
 | `/reservations?userId=` | GET | A citizen's reservations (used by the gateway dashboard) | |
 
@@ -126,7 +131,7 @@ Realises Part A Service 5.1, Part C Service Contract 6, and the assessment lane 
 | `/footprint` | POST | Calculate and store a citizen's footprint report; returns its `caseId` | 6.1, 6.2, 6.3 |
 | `/footprint/:userId/decline-offset` | POST | Citizen answers "No" at 6.4: baseline recorded, case ends | 6.4 (No) |
 | `/footprint/:userId/apply-offset` | PATCH | Called by `offset-service` once credits are retired | 6.13 |
-| `/footprint/:userId` | GET | Retrieve the stored report | |
+| `/footprint/:userId` | GET | Retrieve the stored report, including the energy, transport and food breakdown | |
 
 **Data model:** `footprints(user_id, case_id, energy_kwh_month, transport_km_week, diet_score, total_co2_kg_year, peer_average_co2_kg_year, percentile_vs_peers, net_offset_applied_kg, created_at, updated_at)`.
 
@@ -148,7 +153,7 @@ Realises Part A Service 5.2, Part C Service Contract 7, and the offset-marketpla
 | Endpoint | Method | Purpose |
 | --- | --- | --- |
 | `/offsets` | POST | Accept a purchase (6.4 = Yes, 6.5); returns `202 pending`. Optional `caseId` = the footprint's case |
-| `/offsets/:id` | GET | Poll for the certificate (payment token is never returned) |
+| `/offsets/:id` | GET | Poll for the certificate and the fulfilment `stage` (queued, reserving, paying, retiring, certified or payment_failed); the payment token is never returned |
 | `/offsets?userId=` | GET | A citizen's offset history |
 | *(publishes + consumes)* `offset.requested` | — | Hand-off to the fulfilment worker |
 | *(publishes)* `offset.certified` / `offset.failed` | — | `OffsetNotificationInterface`-equivalent events |
@@ -235,7 +240,7 @@ export async function publishEvent(routingKey: string, payload: unknown) {
 }
 ```
 
-This was tested by stopping RabbitMQ completely while a charging session was ending. `ev-reservation-service` logged "held in outbox for retry", reconnected when the broker returned, and delivered `ev.session.ended`. The consumer re-subscribed automatically and the session was billed 13 seconds after the broker came back. A second test stopped `ev-billing-service` itself: the event waited in the durable queue (visible in the demo console as "1 waiting · no consumer") and was settled as soon as billing restarted.
+This was tested by stopping RabbitMQ completely while a charging session was ending. `ev-reservation-service` logged "held in outbox for retry", reconnected when the broker returned, and delivered `ev.session.ended`. The consumer re-subscribed automatically and the session was billed 13 seconds after the broker came back. A second test stopped `ev-billing-service` itself: the event waited in the durable queue (visible in the operator console as "1 waiting · no consumer") and was settled as soon as billing restarted.
 
 External systems that a university project cannot call for real (the bank card network, the Verified Carbon Registry, transport timetable feeds) are mocked inside the owning service with realistic latency. The mock payment gateway is deterministic by token, so the demo and the Part F simulator can drive every BPMN branch on purpose: `tok_ok` approves, `tok_decline_<n>` declines the first *n* attempts, and `tok_decline_all` always declines.
 
@@ -281,25 +286,67 @@ Design decisions that target process-mining fidelity:
 
 **Export.** `tools/log-exporter` groups every service's events by process and case, sorts each case chronologically, and writes one XES 1.0 file and one CSV per process into `exports/`. The XES declares the standard Concept/Lifecycle/Organizational/Time extensions and both classifiers, so it opens directly in Disco or Apromore with no column mapping. Part F (`docs/PART-F.md`) uses it.
 
-## E.6 Verification and Live Demo
+## E.6 The Citizen App, Verification and Live Demo
 
-The system was run end to end before being written up: all five services and the gateway with RabbitMQ, every endpoint above, both asynchronous round trips, and the gateway aggregation. The services pass TypeScript's strict type check (`tsc --noEmit`). Two repeatable demonstrations exist:
+### E.6.1 NetZero Hub citizen app
 
-1. **`demo.sh`** (terminal, `PAUSE=1` for step-by-step presenting) walks through: journey plan; reservation; an overlapping booking rejected with alternates; a declined pre-authorisation and its retry; charging; asynchronous billing (hold captured, remainder released); a repeat unplug refused; footprint; offset purchase on the footprint's case; certificate; the footprint's score updated by the callback; and the aggregated dashboard.
-2. **The browser demo console** at `http://localhost:3000` drives the same steps with buttons or single-key shortcuts (including no-show and abandonment). It has three live views:
-   - **Architecture:** the deployment diagram, animated by the services' own events. Calls travel as tokens from the client through the gateway; asynchronous hops travel through RabbitMQ; RabbitMQ shows each queue's depth and consumer count; a stopped service turns red.
-   - **Process map:** a directly-follows process map built in the browser from the live event stream, with frequencies, and with behaviour outside the Part B model highlighted. It previews Part F's process mining during the demo.
-   - **Events:** the raw per-activity event feed, with a click-to-filter on any case id.
+The platform's user-facing front end is a citizen app served by the gateway at `/` (`gateway/public/index.html` and `app/`). It is a dependency-free single-page app (plain ES modules, bundled fonts, no build step) with a web layout on desktop and an app layout with bottom tabs on phones, matching the Project Description's "mobile applications, web portals" channels. A resident signs up once, then uses every Part A service from the six providers in one place:
 
-   ![Figure E.5](demo-screenshots/console-architecture-live.png)
+| Provider | Services in the app | Backed by |
+| --- | --- | --- |
+| EcoTransit Authority | 2.1 low-carbon journey planner; 2.2 transit passes; 2.3 share bikes | 2.1: `journey-planner-service`; 2.2–2.3 simulated |
+| ChargeNet EV | 3.1 charger finder with live status and map; 3.2 bay booking; 3.3 charging session, pre-authorisation, receipt; 3.4 road-trip range planner | 3.1–3.3: `ev-reservation-service` + `ev-billing-service`; 3.4 simulated |
+| GovEnvironment Agency | 5.1 footprint calculator; 5.2 offset purchase and certificate; 5.3 green business lookup | 5.1–5.2: `footprint-service` + `offset-service`; 5.3 simulated |
+| GreenEnergy Co. | 1.1 renewable plan switch; 1.2 solar feasibility; 1.3 smart-meter insights; 1.4 solar buy-back registration | simulated |
+| GreenWaste Solutions | 4.1 e-waste pickup (Process 5 checks and fix loop); 4.2 which-bin guide; 4.3 compost bin | simulated |
+| EcoCommunity Action | 6.1 events with tickets and calendar invites; 6.2 garden plots; 6.3 volunteer matching | simulated |
 
-   *Figure E.5 — Demo console in presenter mode: a charging session in progress, with tokens travelling client → gateway → ev-reservation-service → payment gateway, and live RabbitMQ queue statistics.*
+The simulated providers are clearly separated in the code (`app/data.js` and the provider views). They follow the same rules as the real services (for example, the payment-card behaviour of the platform's payment gateway) and the Part B processes where one exists (Process 1 and 2 checks for energy, Process 5 for e-waste). Cross-cutting features tie the services together: a wallet of payment cards, green points for sustainable choices (the Project Description's "incentives for sustainable practices") with redeemable rewards, and notifications.
 
-   ![Figure E.6](demo-screenshots/console-billing-down.png)
+The app makes the microservice behaviour visible in a citizen's terms rather than a developer's:
 
-   *Figure E.6 — Failure test: ev-billing-service stopped while a session ends. The service turns red and RabbitMQ shows the billing queue with no consumer; after restart the receipt appears without any client retry (`demo-screenshots/console-billing-recovered.png`).*
+- **The home screen's carbon ring** is the user's footprint from `footprint-service`, filling in as `offset-service` certifies offsets. The gateway's aggregation endpoint supplies it in one call.
+- **Asynchronous outcomes become notifications.** After a charging session or an offset purchase, the app keeps a watch list and tells the user when the receipt or certificate is issued. If billing is down, the user is told the receipt will follow, and the notification arrives once billing recovers.
+- **Failure paths are plain language.** A declined pre-authorisation (BPMN 4.7a) is explained with a retry button; offset payment retries (6.9) are shown in the progress tracker; a rejected e-waste booking lists exactly what to change.
 
-   *Presenter mode* (`P`) enlarges everything for a projector and adds an on-stage timer. `rehearse.sh` times a full 8-minute run-through segment by segment. See `docs/DEMO.md` for the Week 12 runbook.
+![Figure E.5](app-screenshots/02-home-carbon-ring.png)
+
+*Figure E.5 — Citizen app home: the carbon ring (footprint net of certified offsets), green points, and notifications fed by asynchronous service outcomes.*
+
+![Figure E.6](app-screenshots/03-book-charging-bay.png)
+
+*Figure E.6 — Booking a charging bay: slot availability from `ev-reservation-service`; booked or past times are disabled.*
+
+![Figure E.7](app-screenshots/05-live-charging-session.png)
+
+*Figure E.7 — Live charging session after the pre-authorisation hold, then the asynchronous receipt (`app-screenshots/06-async-receipt.png`).*
+
+![Figure E.8](app-screenshots/07-offset-progress.png)
+
+*Figure E.8 — Offset order tracking the fulfilment stages from `offset-service`, including an automatic payment retry, ending in the certificate (`app-screenshots/08-offset-certificate.png`).*
+
+### E.6.2 Verification
+
+The system was run end to end before being written up: all five services and the gateway with RabbitMQ, every endpoint above, both asynchronous round trips, and the gateway aggregation. The services pass TypeScript's strict type check (`tsc --noEmit`). The operator console's Stop/Start controls were exercised against the running stack (including a charging session ended while billing was stopped from the panel), and its security checks were confirmed: requests without the header, for the gateway, or for any other action are refused. The citizen app was driven through every screen in a headless browser at desktop and phone widths, with no script errors and no horizontal overflow, including the full flows of booking, declined card, retry, charging, billing (also with billing stopped and restarted), footprint, offset with a declined-then-approved card, and journey planning.
+
+### E.6.3 Live demo
+
+The Week 12 demo is told from the citizen's side on the **stage view** (`localhost:4000/stage/`): the citizen app (`localhost:3000`) in a phone frame beside the **operator console** (`localhost:4000`). The console shows:
+
+- **Microservices panel:** each service's container state with a Stop/Start button, and the RabbitMQ queues. Stopping a service mid-flow is how the demo shows fault tolerance: the app keeps working and asynchronous work waits in its queue until the consumer is back.
+- **Architecture:** the deployment diagram, animated by the services' own events. Calls travel as tokens from the app through the gateway; asynchronous hops travel through RabbitMQ; RabbitMQ shows each queue's depth and consumer count; a stopped service turns red.
+- **Process map:** a directly-follows process map built in the browser from the live event stream, with behaviour outside the Part B model highlighted. It previews Part F's process mining during the demo.
+- **Events:** the raw per-activity event feed, with a click-to-filter on any case id.
+
+![Figure E.9](app-screenshots/11-stage-view.png)
+
+*Figure E.9 — Stage view: the citizen app (left) and the operator console (right) with its service controls and live architecture.*
+
+![Figure E.10](demo-screenshots/console-billing-down.png)
+
+*Figure E.10 — Failure test: ev-billing-service stopped from the console's service panel while a session ends. The service turns red and RabbitMQ shows the billing queue with one message and no consumer; after Start the receipt arrives without any retry by the user (`demo-screenshots/console-billing-recovered.png`).*
+
+`demo.sh` (terminal, `PAUSE=1` for step-by-step presenting) remains as an API-level walkthrough and fallback. `rehearse.sh` times the 8-minute run-of-show segment by segment. See `docs/DEMO.md` for the Week 12 runbook.
 
 ## E.7 Traceability Summary
 

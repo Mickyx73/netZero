@@ -33,9 +33,20 @@ const PORT = process.env.PORT || 3001;
 const TARIFF_PER_KWH = Number(process.env.TARIFF_PER_KWH || 0.45); // AUD, must match ev-billing-service
 const ESTIMATED_SESSION_KWH = Number(process.env.ESTIMATED_SESSION_KWH || 60); // hold covers a typical full session
 
-// Mock nearby-station list used only to populate the "alternate stations"
-// branch of the alt fragment (BPMN gateway 4.3 "NO" / SoaML Figure C.9 else-branch).
-const NEARBY_STATIONS = ["CN-WOL-01", "CN-WOL-02", "CN-WOL-03", "CN-WOL-04", "CN-WOL-05", "CN-WOL-06", "CN-WOL-07", "CN-WOL-08"];
+// ChargeNet's station catalogue (Part A Service 3.1, "EV Charging Station
+// Locator & Status"). Static reference data owned by this service; live
+// status is derived from this service's own reservations (see GET /stations).
+const STATIONS = [
+  { id: "CN-WOL-01", name: "Crown Street Mall car park", suburb: "Wollongong", lat: -34.4251, lng: 150.8931, plugs: ["CCS2", "Type 2"], kw: 50 },
+  { id: "CN-WOL-02", name: "UOW Innovation Campus", suburb: "North Wollongong", lat: -34.4045, lng: 150.8798, plugs: ["CCS2", "CHAdeMO"], kw: 75 },
+  { id: "CN-WOL-03", name: "Wollongong Station", suburb: "Wollongong", lat: -34.4271, lng: 150.8838, plugs: ["Type 2"], kw: 22 },
+  { id: "CN-WOL-04", name: "North Beach Pavilion", suburb: "North Wollongong", lat: -34.4155, lng: 150.9010, plugs: ["CCS2", "Type 2"], kw: 50 },
+  { id: "CN-WOL-05", name: "Fairy Meadow shops", suburb: "Fairy Meadow", lat: -34.3940, lng: 150.8925, plugs: ["CCS2"], kw: 120 },
+  { id: "CN-WOL-06", name: "Figtree Grove", suburb: "Figtree", lat: -34.4353, lng: 150.8604, plugs: ["Type 2", "CHAdeMO"], kw: 22 },
+  { id: "CN-WOL-07", name: "Shellharbour Square", suburb: "Blackbutt", lat: -34.5655, lng: 150.8406, plugs: ["CCS2", "Type 2"], kw: 150 },
+  { id: "CN-WOL-08", name: "Thirroul Village", suburb: "Thirroul", lat: -34.3175, lng: 150.9206, plugs: ["CCS2"], kw: 50 },
+];
+const STATION_IDS = STATIONS.map((s) => s.id);
 
 const RSVP = "RSVP Management"; // BPMN lane names are used as the event resource
 const DRIVER = "EV Owner";
@@ -71,6 +82,56 @@ const tryBook = db.transaction(
     return { booked: true as const };
   }
 );
+
+// Stations with no occupying booking overlapping [slotStart, slotEnd) -- the
+// genuinely bookable alternatives offered when a slot is taken.
+function freeStationsFor(slotStart: string, slotEnd: string): string[] {
+  const placeholders = OCCUPYING_STATUSES.map(() => "?").join(",");
+  const busy = new Set(
+    (db.prepare(
+      `SELECT DISTINCT station_id FROM reservations
+       WHERE status IN (${placeholders}) AND slot_start < ? AND slot_end > ?`
+    ).all(...OCCUPYING_STATUSES, slotEnd, slotStart) as { station_id: string }[]).map((r) => r.station_id)
+  );
+  return STATION_IDS.filter((id) => !busy.has(id));
+}
+
+// GET /stations -> catalogue + live status (Part A Service 3.1).
+// Status comes from this service's own data: a session charging right now,
+// a booking covering the current time, or free.
+app.get("/stations", (_req, res) => {
+  const now = new Date().toISOString();
+  const rows = db
+    .prepare(
+      `SELECT station_id, status FROM reservations
+       WHERE (status = 'charging') OR (status IN ('confirmed','preauth_declined') AND slot_start <= ? AND slot_end > ?)`
+    )
+    .all(now, now) as { station_id: string; status: string }[];
+  res.json(
+    STATIONS.map((st) => {
+      const here = rows.filter((r) => r.station_id === st.id);
+      const status = here.some((r) => r.status === "charging") ? "charging" : here.length ? "reserved" : "available";
+      return { ...st, status, tariffPerKwh: TARIFF_PER_KWH };
+    })
+  );
+});
+
+// GET /stations/:id/availability?from=<ISO>&to=<ISO>
+// Booked intervals at one station within a window, so a client can grey out
+// taken slots before the driver even asks (no user ids are exposed).
+app.get("/stations/:id/availability", (req, res) => {
+  const from = toIso(req.query.from) ?? new Date().toISOString();
+  const to = toIso(req.query.to) ?? new Date(Date.parse(from) + 86400000).toISOString();
+  const placeholders = OCCUPYING_STATUSES.map(() => "?").join(",");
+  const booked = db
+    .prepare(
+      `SELECT slot_start AS start, slot_end AS end FROM reservations
+       WHERE station_id = ? AND status IN (${placeholders}) AND slot_start < ? AND slot_end > ?
+       ORDER BY slot_start`
+    )
+    .all(req.params.id, ...OCCUPYING_STATUSES, to, from);
+  res.json({ stationId: req.params.id, from, to, booked });
+});
 
 // POST /reservations -> reserveBay(stationId, slotStart, slotEnd, userId)
 app.post("/reservations", (req, res) => {
@@ -112,7 +173,7 @@ app.post("/reservations", (req, res) => {
   if (!result.booked) {
     // Gateway 4.3 = NO -> "Suggest alternate charging bays/time" -> end "RSVP not possible".
     // This is the alt fragment's else-branch in Figure C.9: a business outcome, not an error.
-    const alternateStations = NEARBY_STATIONS.filter((s) => s !== stationId).slice(0, 3);
+    const alternateStations = freeStationsFor(slotStart, slotEnd).filter((s) => s !== stationId).slice(0, 3);
     logEvent({
       process: PROCESS,
       caseId: id,
@@ -310,6 +371,28 @@ app.post("/reservations/:id/complete", async (req, res) => {
   });
 
   res.json({ outcome: "sessionEnded", reservationId: row.id, kWhConsumed, status: "session_ended" });
+});
+
+// POST /reservations/:id/cancel
+// The driver cancels a confirmed booking before arriving, which frees the
+// bay. Part B has no cancellation path either, so like the no-show it is
+// logged without a bpmnRef and surfaces in Part F's conformance checking.
+app.post("/reservations/:id/cancel", (req, res) => {
+  const row = loadOr404(req.params.id, res);
+  if (!row) return;
+  if (row.status !== "confirmed") {
+    return res.status(409).json({ error: `cannot cancel a reservation in status '${row.status}'` });
+  }
+  setStatus(row.id, "cancelled");
+  logEvent({
+    process: PROCESS,
+    caseId: row.id,
+    activity: "Reservation cancelled by driver",
+    lifecycle: "complete",
+    resource: DRIVER,
+    data: { stationId: row.station_id, slotStart: row.slot_start, modelled: false },
+  });
+  res.json({ outcome: "reservationCancelled", reservationId: row.id, status: "cancelled" });
 });
 
 // POST /reservations/:id/no-show

@@ -234,14 +234,21 @@ async function runProcess(name) {
 }
 
 async function main() {
-  const h = await call("GET", "/api/health").catch(() => null);
+  // The gateway answers /health itself; one cheap read per backing service
+  // confirms the services behind it are up too.
+  const h = await call("GET", "/health").catch(() => null);
   if (!h || h.status !== 200) {
     console.error(`Gateway not reachable at ${BASE}. Start the stack first: docker compose up --build -d`);
     process.exit(1);
   }
-  const down = Object.entries(h.body).filter(([, v]) => v !== "up");
+  const probes = { reservation: "/api/stations", billing: "/api/billing/none", footprint: "/api/footprint/none", offset: "/api/offsets?userId=none" };
+  const down = [];
+  for (const [name, path] of Object.entries(probes)) {
+    const r = await call("GET", path).catch(() => null);
+    if (!r || r.status >= 500) down.push(name);
+  }
   if (down.length) {
-    console.error(`Some services are not up yet: ${down.map(([k]) => k).join(", ")}. Wait a few seconds and retry.`);
+    console.error(`Some services are not up yet: ${down.join(", ")}. Wait a few seconds and retry.`);
     process.exit(1);
   }
 

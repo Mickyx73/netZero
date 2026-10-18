@@ -8,12 +8,13 @@ fs.mkdirSync(DATA_DIR, { recursive: true });
 export const db = new Database(path.join(DATA_DIR, "offsets.db"));
 db.pragma("journal_mode = WAL");
 
-// Schema version 2 adds price and the payment token the async worker charges.
-// Older demo databases are rebuilt (demo data only).
-const SCHEMA_VERSION = 2;
-if ((db.pragma("user_version", { simple: true }) as number) < SCHEMA_VERSION) {
+// Schema version 2 adds price and the payment token the async worker charges;
+// version 3 adds the fulfilment stage shown to the citizen. Databases older
+// than v2 are rebuilt (demo data only); v2 is upgraded in place.
+const SCHEMA_VERSION = 3;
+const current = db.pragma("user_version", { simple: true }) as number;
+if (current < 2) {
   db.exec(`DROP TABLE IF EXISTS offsets`);
-  db.pragma(`user_version = ${SCHEMA_VERSION}`);
 }
 
 db.exec(`
@@ -28,6 +29,7 @@ db.exec(`
     price_aud REAL NOT NULL,
     payment_token TEXT NOT NULL,   -- mock gateway token; never returned by the API
     status TEXT NOT NULL,          -- 'pending' | 'processing' | 'certified' | 'payment_failed'
+    stage TEXT NOT NULL DEFAULT 'queued',  -- queued | reserving | paying | retiring | certified | payment_failed
     certificate_id TEXT,
     retired_serials TEXT,
     retry_count INTEGER NOT NULL DEFAULT 0,
@@ -36,3 +38,9 @@ db.exec(`
   );
   CREATE INDEX IF NOT EXISTS idx_offsets_user ON offsets (user_id);
 `);
+
+if (current === 2) {
+  db.exec(`ALTER TABLE offsets ADD COLUMN stage TEXT NOT NULL DEFAULT 'queued'`);
+  db.exec(`UPDATE offsets SET stage = status WHERE status IN ('certified', 'payment_failed')`);
+}
+if (current < SCHEMA_VERSION) db.pragma(`user_version = ${SCHEMA_VERSION}`);

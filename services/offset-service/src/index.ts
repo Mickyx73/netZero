@@ -44,6 +44,12 @@ const PROJECT_ACTIVITIES: Record<string, string> = {
   "waste-recycling": "Reserve waste recycling credits",
 };
 
+// Fulfilment stage, so the citizen's app can show progress while the
+// asynchronous purchase moves through Process 6.
+function setStage(offsetId: string, stage: string) {
+  db.prepare(`UPDATE offsets SET stage = ?, updated_at = datetime('now') WHERE id = ?`).run(stage, offsetId);
+}
+
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -202,13 +208,15 @@ async function fulfil(offsetId: string) {
   const caseId = row.case_id;
   const types: string[] = JSON.parse(row.project_types);
 
+  setStage(offsetId, "reserving");
   await reserveCredits(caseId, offsetId, types, row.amount_co2_kg);
 
+  setStage(offsetId, "paying");
   if (!(await takePayment(row))) {
     // Part B loops on 6.9 indefinitely; in practice the purchase is cancelled
     // after MAX_RETRIES. Logged without a bpmnRef: a deviation from the model
     // that Part F's conformance checking is expected to find.
-    db.prepare(`UPDATE offsets SET status = 'payment_failed', updated_at = datetime('now') WHERE id = ?`).run(offsetId);
+    db.prepare(`UPDATE offsets SET status = 'payment_failed', stage = 'payment_failed', updated_at = datetime('now') WHERE id = ?`).run(offsetId);
     logEvent({
       process: PROCESS,
       caseId,
@@ -223,6 +231,7 @@ async function fulfil(offsetId: string) {
   }
 
   // 6.10 -> 6.11: the registry cancels the purchased units' serial numbers.
+  setStage(offsetId, "retiring");
   logEvent({ process: PROCESS, caseId, activity: "Retire credits under citizen name", lifecycle: "start", resource: REGISTRY, bpmnRef: "6.10", data: { offsetId } });
   await sleep(jitter(800, 1600)); // Verified Carbon Registry round trip
   const serials = `VCS-${Math.floor(Math.random() * 900000 + 100000)}..${Math.floor(Math.random() * 900000 + 100000)}`;
@@ -230,7 +239,7 @@ async function fulfil(offsetId: string) {
 
   const certificateId = uuidv4();
   db.prepare(
-    `UPDATE offsets SET status = 'certified', certificate_id = ?, retired_serials = ?, updated_at = datetime('now') WHERE id = ?`
+    `UPDATE offsets SET status = 'certified', stage = 'certified', certificate_id = ?, retired_serials = ?, updated_at = datetime('now') WHERE id = ?`
   ).run(certificateId, serials, offsetId);
 
   logEvent({

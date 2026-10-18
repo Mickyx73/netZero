@@ -41,7 +41,9 @@ function calculate(energyKwhMonth: number, transportKmWeek: number, dietScore: n
   const diffPct = Math.round(((total - PEER_AVERAGE_CO2_KG_YEAR) / PEER_AVERAGE_CO2_KG_YEAR) * 100);
   const percentile =
     diffPct > 5 ? `${diffPct}% above the national average` : diffPct < -5 ? `${Math.abs(diffPct)}% below the national average` : `about average`;
-  return { total, peerAverage: PEER_AVERAGE_CO2_KG_YEAR, percentile };
+  // Per-category split, so a citizen can see where their emissions come from.
+  const breakdown = { energy: Math.round(energyCo2), transport: Math.round(transportCo2), diet: Math.round(dietCo2) };
+  return { total, peerAverage: PEER_AVERAGE_CO2_KG_YEAR, percentile, breakdown };
 }
 
 // POST /footprint -> calculateFootprint(userId, energyKwhMonth, transportKmWeek, dietScore)
@@ -71,7 +73,7 @@ app.post("/footprint", (req, res) => {
     data: { userId, energyKwhMonth, transportKmWeek, dietScore },
   });
 
-  const { total, peerAverage, percentile } = calculate(energyKwhMonth, transportKmWeek, dietScore);
+  const { total, peerAverage, percentile, breakdown } = calculate(energyKwhMonth, transportKmWeek, dietScore);
 
   logEvent({
     process: PROCESS,
@@ -110,13 +112,15 @@ app.post("/footprint", (req, res) => {
     totalCo2KgYear: total,
     peerAverageCo2KgYear: peerAverage,
     comparisonToPeers: percentile,
+    breakdownKgYear: breakdown,
   });
 });
 
 app.get("/footprint/:userId", (req, res) => {
-  const row = db.prepare(`SELECT * FROM footprints WHERE user_id = ?`).get(req.params.userId);
+  const row: any = db.prepare(`SELECT * FROM footprints WHERE user_id = ?`).get(req.params.userId);
   if (!row) return res.status(404).json({ error: "no footprint report on file for this user" });
-  res.json(row);
+  const { breakdown } = calculate(row.energy_kwh_month, row.transport_km_week, row.diet_score);
+  res.json({ ...row, breakdown_kg_year: breakdown });
 });
 
 // PATCH /footprint/:userId/apply-offset -> called by offset-service once a

@@ -139,6 +139,6 @@ tools/log-exporter/      JSONL -> XES / CSV
 tools/apromore/          local Apromore Community Edition (Docker) for Part F
 analytics/               Part F pm4py analysis (mine.py) and its Dockerfile
 docs/                    Part E/F write-ups, demo runbook, diagrams (.mmd sources + .png), Part F results snapshot
-demo.sh rehearse.sh partf.sh   terminal demo · timed demo rehearsal · Part F pipeline
+demo.sh partf.sh   terminal demo · timed demo rehearsal · Part F pipeline
 logs/ exports/ analysis/ generated at runtime (git-ignored)
 ```

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "analytics": {
+      "root": "analytics",
+      "runtime": "python"
+    },
+    "gateway": {
+      "root": "gateway",
+      "framework": "express"
+    },
+    "ops-console": {
+      "root": "ops-console",
+      "framework": "express"
+    },
+    "ev-billing-service": {
+      "root": "services/ev-billing-service",
+      "framework": "express"
+    },
+    "ev-reservation-service": {
+      "root": "services/ev-reservation-service",
+      "framework": "express"
+    },
+    "footprint-service": {
+      "root": "services/footprint-service",
+      "framework": "express"
+    },
+    "journey-planner-service": {
+      "root": "services/journey-planner-service",
+      "framework": "express"
+    },
+    "offset-service": {
+      "root": "services/offset-service",
+      "framework": "express"
+    },
+    "log-exporter": {
+      "root": "tools/log-exporter",
+      "runtime": "container"
+    },
+    "simulator": {
+      "root": "tools/simulator",
+      "runtime": "container"
+    }
+  },
+  "rewrites": []
+}

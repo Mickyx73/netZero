@@ -1,17 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
-    "analytics": {
-      "root": "analytics",
-      "runtime": "python"
-    },
     "gateway": {
       "root": "gateway",
-      "framework": "express"
-    },
-    "ops-console": {
-      "root": "ops-console",
-      "framework": "express"
+      "framework": "express",
+      "bindings": [
+        { "type": "service", "service": "ev-reservation-service", "format": "url", "env": "RESERVATION_URL" },
+        { "type": "service", "service": "ev-billing-service", "format": "url", "env": "BILLING_URL" },
+        { "type": "service", "service": "footprint-service", "format": "url", "env": "FOOTPRINT_URL" },
+        { "type": "service", "service": "offset-service", "format": "url", "env": "OFFSET_URL" },
+        { "type": "service", "service": "journey-planner-service", "format": "url", "env": "JOURNEY_URL" }
+      ]
     },
     "ev-billing-service": {
       "root": "services/ev-billing-service",
@@ -31,16 +30,13 @@
     },
     "offset-service": {
       "root": "services/offset-service",
-      "framework": "express"
-    },
-    "log-exporter": {
-      "root": "tools/log-exporter",
-      "runtime": "container"
-    },
-    "simulator": {
-      "root": "tools/simulator",
-      "runtime": "container"
+      "framework": "express",
+      "bindings": [
+        { "type": "service", "service": "footprint-service", "format": "url", "env": "FOOTPRINT_URL" }
+      ]
     }
   },
-  "rewrites": []
+  "rewrites": [
+    { "source": "/(.*)", "destination": { "service": "gateway" } }
+  ]
 }
